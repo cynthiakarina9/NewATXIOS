@@ -16,7 +16,7 @@ namespace ATXBSAPP.Views
         {
             InitializeComponent();
             var browser = new WebView();
-            browser.Source = "https://webchat.botframework.com/embed/WebAppBotEx?s=Wg8eyyHzrnU.cwA.h-w.G6Vo4iJ1hSnBqZjZrzxN-a_FLqT_D2U0K_3224Mj044";
+            browser.Source = "https://powerva.microsoft.com/webchat/bots/cef1fe29-4e84-40dc-92c6-9651a8afb4a9";
             this.Content = browser;
         }
     }
