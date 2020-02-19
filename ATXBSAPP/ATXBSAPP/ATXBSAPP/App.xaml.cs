@@ -1,0 +1,34 @@
+﻿using System;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+using ATXBSAPP.Services;
+using ATXBSAPP.Views;
+
+namespace ATXBSAPP
+{
+    public partial class App : Application
+    {
+
+        public App()
+        {
+            InitializeComponent();
+
+            DependencyService.Register<MockDataStore>();
+            this.MainPage = new WebPage { Title = "WebPage" };
+            MainPage = new MainPage();
+            
+        }
+
+        protected override void OnStart()
+        {
+        }
+
+        protected override void OnSleep()
+        {
+        }
+
+        protected override void OnResume()
+        {
+        }
+    }
+}
