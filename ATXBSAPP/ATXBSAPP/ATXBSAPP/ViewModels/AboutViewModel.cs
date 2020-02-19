@@ -10,7 +10,7 @@ namespace ATXBSAPP.ViewModels
         public AboutViewModel()
         {
             Title = "About";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://xamarin.com"));
+            OpenWebCommand = new Command(async () => await Browser.OpenAsync("http://atx.mx/"));
         }
 
         public ICommand OpenWebCommand { get; }
