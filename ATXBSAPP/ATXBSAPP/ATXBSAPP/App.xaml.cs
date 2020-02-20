@@ -14,7 +14,6 @@ namespace ATXBSAPP
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            this.MainPage = new WebPage { Title = "WebPage" };
             MainPage = new MainPage();
             
         }

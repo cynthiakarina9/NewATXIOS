@@ -5,13 +5,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="ATXBSAPP.App">
- 
-    <Application.Resources>
+
+        <Application.Resources>
         <!--Global Styles-->
-		<Color x:Key="NavigationPrimary">#21D6F3</Color>
+        <Color x:Key="NavigationPrimary">#2A2663</Color>
 		<Style TargetType="NavigationPage">
 			<Setter Property="NavigationPage.BarBackgroundColor" Value="{StaticResource Key=NavigationPrimary}" />
-			<Setter Property="NavigationPage.BarTextColor" Value="White" />
+			<Setter Property="NavigationPage.BarTextColor" Value="white" />
 		</Style>
     </Application.Resources>
     
