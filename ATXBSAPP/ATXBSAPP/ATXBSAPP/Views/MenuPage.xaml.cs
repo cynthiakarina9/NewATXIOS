@@ -22,7 +22,7 @@ namespace ATXBSAPP.Views
             {
                 new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
                 new HomeMenuItem {Id = MenuItemType.About, Title="About" },
-                new HomeMenuItem {Id = MenuItemType.About, Title="Soporte" }
+                new HomeMenuItem {Id = MenuItemType.News, Title="News" }
             };
 
             ListViewMenu.ItemsSource = menuItems;

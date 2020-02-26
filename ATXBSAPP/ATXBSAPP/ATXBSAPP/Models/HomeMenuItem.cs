@@ -7,7 +7,8 @@ namespace ATXBSAPP.Models
     public enum MenuItemType
     {
         Browse,
-        About
+        About,
+        News
     }
     public class HomeMenuItem
     {

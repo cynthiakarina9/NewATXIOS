@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <Compile Remove="Services\Page1.xaml.cs" />
+    <Compile Remove="ViewModels\View1.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +27,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Views\PostRestPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\WebPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
