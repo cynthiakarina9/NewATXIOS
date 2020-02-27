@@ -14,5 +14,13 @@ namespace ATXBSAPP.Views
         {
             InitializeComponent();
         }
+
+        async void Chat_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new WebPage()));
+        }
+
+        
+        
     }
 }
