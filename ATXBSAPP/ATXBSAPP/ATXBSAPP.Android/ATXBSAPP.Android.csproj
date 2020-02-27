@@ -103,5 +103,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\chatbot0.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logo_ATX.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

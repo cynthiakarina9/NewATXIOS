@@ -12,7 +12,7 @@
         <vm:AboutViewModel />
     </ContentPage.BindingContext>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Chat" Clicked="Chat_Clicked" />
+        <ToolbarItem Icon="chat.png" Clicked="Chat_Clicked" />
     </ContentPage.ToolbarItems>
     
     <ContentPage.Resources>

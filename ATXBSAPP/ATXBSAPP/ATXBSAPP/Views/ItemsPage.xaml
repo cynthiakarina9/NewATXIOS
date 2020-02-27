@@ -9,7 +9,7 @@
              x:Name="BrowseItemsPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Chat" Clicked="Chat_Clicked" />
+        <ToolbarItem Icon="Chat.png" Clicked="Chat_Clicked" />
     </ContentPage.ToolbarItems>
 
     <StackLayout>
