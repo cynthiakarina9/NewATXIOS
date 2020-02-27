@@ -30,6 +30,7 @@ namespace ATXBSAPP.Views
 
         public PostRestPage()
         {
+            Title = "News";
             InitializeComponent();
         }
 
@@ -41,6 +42,11 @@ namespace ATXBSAPP.Views
             _post = new ObservableCollection<Post>(post);
             Post_List.ItemsSource = _post;
             base.OnAppearing();
+        }
+
+        async void Chat_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new WebPage()));
         }
     }
 }
