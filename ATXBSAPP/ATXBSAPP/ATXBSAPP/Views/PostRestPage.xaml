@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="ATXBSAPP.Views.PostRestPage">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Chat" Clicked="Chat_Clicked" />
+        <ToolbarItem Icon="chat.png" Clicked="Chat_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
