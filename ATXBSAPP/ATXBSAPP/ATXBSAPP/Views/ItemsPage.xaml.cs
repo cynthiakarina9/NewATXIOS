@@ -27,7 +27,7 @@ namespace ATXBSAPP.Views
             BindingContext = viewModel = new ItemsViewModel();
         }
 
-        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+        /*async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
             var item = args.SelectedItem as Item;
             if (item == null)
@@ -37,19 +37,19 @@ namespace ATXBSAPP.Views
 
             // Manually deselect item.
             ItemsListView.SelectedItem = null;
-        }
+        }*/
 
         async void Chat_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new WebPage()));
         }
 
-        protected override void OnAppearing()
+       /* protected override void OnAppearing()
         {
             base.OnAppearing();
 
             if (viewModel.Items.Count == 0)
                 viewModel.LoadItemsCommand.Execute(null);
-        }
+        }*/
     }
 }

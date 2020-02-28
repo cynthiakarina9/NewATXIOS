@@ -8,7 +8,8 @@ namespace ATXBSAPP.Models
     {
         Browse,
         About,
-        News
+        News,
+        Promotions
     }
     public class HomeMenuItem
     {

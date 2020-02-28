@@ -1,6 +1,7 @@
 ﻿using System;
 
 using ATXBSAPP.Models;
+using Xamarin.Forms;
 
 namespace ATXBSAPP.ViewModels
 {
@@ -11,6 +12,7 @@ namespace ATXBSAPP.ViewModels
         {
             Title = item?.Text;
             Item = item;
+            //OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://atx.mx/acerca/"));
         }
     }
 }

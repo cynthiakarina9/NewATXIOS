@@ -39,6 +39,9 @@ namespace ATXBSAPP.Views
                     case (int)MenuItemType.News:
                         MenuPages.Add(id, new NavigationPage(new PostRestPage()));
                         break;
+                    case (int)MenuItemType.Promotions:
+                        MenuPages.Add(id, new NavigationPage(new Promotions()));
+                        break;
                 }
             }
 
