@@ -21,10 +21,10 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+        <StackLayout  VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                 <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                    <Image Source="logo_ATX.png" VerticalOptions="Center" HeightRequest="34" />
+                    <Image Source="logo_ATX.png" VerticalOptions="End" HeightRequest="40"/>
                 </ContentView>
             </StackLayout>
         </StackLayout>
@@ -43,13 +43,18 @@
                 <DataTemplate>
                     <ViewCell>
                         <Grid Padding="10">
-                            <Label Text="{Binding Title}" d:Text="{Binding .}" FontSize="20"/>
+                             <Label Text="{Binding Title}" d:Text="{Binding .}" FontSize="20"/>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </StackLayout>
+        <Image Source="FACEBOOK-2.png" VerticalOptions="End"/>
+        <Image Source="INSTAGRAM-2.png" VerticalOptions="End"/>
+        <Image Source="LIKEDIN-2.png" VerticalOptions="End"/>
+        <Image Source="TWITTER-2.png" VerticalOptions="End"/>
+        <Image Source="YT-2.png" VerticalOptions="End"/>
+        </StackLayout>
 
  
     </Grid>

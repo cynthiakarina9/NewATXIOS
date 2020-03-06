@@ -42,6 +42,12 @@ namespace ATXBSAPP.Views
                     case (int)MenuItemType.Promotions:
                         MenuPages.Add(id, new NavigationPage(new Promotions()));
                         break;
+                    case (int)MenuItemType.Store:
+                        MenuPages.Add(id, new NavigationPage(new Store()));
+                        break;
+                    case (int)MenuItemType.Frecuency:
+                        MenuPages.Add(id, new NavigationPage(new Frecuency()));
+                        break;
                 }
             }
 

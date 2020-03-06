@@ -7,6 +7,7 @@ using Xamarin.Forms;
 
 using ATXBSAPP.Models;
 using ATXBSAPP.Views;
+using Xamarin.Essentials;
 
 namespace ATXBSAPP.ViewModels
 {
@@ -17,9 +18,10 @@ namespace ATXBSAPP.ViewModels
 
         public ItemsViewModel()
         {
-            Title = "Browse";
+            Title = "Inicio";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+            
 
             MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
             {

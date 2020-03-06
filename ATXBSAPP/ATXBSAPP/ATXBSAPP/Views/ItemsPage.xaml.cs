@@ -10,6 +10,7 @@ using Xamarin.Forms.Xaml;
 using ATXBSAPP.Models;
 using ATXBSAPP.Views;
 using ATXBSAPP.ViewModels;
+using Xamarin.Essentials;
 
 namespace ATXBSAPP.Views
 {
@@ -44,12 +45,19 @@ namespace ATXBSAPP.Views
             await Navigation.PushModalAsync(new NavigationPage(new WebPage()));
         }
 
-       /* protected override void OnAppearing()
+        async void support_Clicked(object sender, EventArgs e)
         {
-            base.OnAppearing();
+            await Browser.OpenAsync("https://atx.crm.dynamics.com/main.aspx?appid=cfdbc5f7-d0fc-e911-a814-000d3a1b142f&pagetype=dashboard&id=e6941e88-d854-e911-a97e-000d3a19907d&type=system&_canOverride=true");
+        }
 
-            if (viewModel.Items.Count == 0)
-                viewModel.LoadItemsCommand.Execute(null);
-        }*/
+
+
+        /* protected override void OnAppearing()
+         {
+             base.OnAppearing();
+
+             if (viewModel.Items.Count == 0)
+                 viewModel.LoadItemsCommand.Execute(null);
+         }*/
     }
 }

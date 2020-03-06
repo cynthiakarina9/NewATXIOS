@@ -8,7 +8,7 @@
 
         <Application.Resources>
         <!--Global Styles-->
-        <Color x:Key="NavigationPrimary">#2A2663</Color>
+        <Color x:Key="NavigationPrimary">#19191E</Color>
 		<Style TargetType="NavigationPage">
 			<Setter Property="NavigationPage.BarBackgroundColor" Value="{StaticResource Key=NavigationPrimary}" />
 			<Setter Property="NavigationPage.BarTextColor" Value="white" />
