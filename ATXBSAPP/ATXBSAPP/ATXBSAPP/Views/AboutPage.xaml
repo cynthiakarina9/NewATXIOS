@@ -80,6 +80,11 @@
                         TextColor="White" />
             </StackLayout>
         </ScrollView>
+        <Grid>
+        
+                <Button ImageSource="FACEBOOK22.png" VerticalOptions="End" WidthRequest ="20" HeightRequest="20"  ContentLayout="Bottom,0" Clicked="FB_Clicked"/>
+           
+        </Grid>
     </Grid>
     
 </ContentPage>
