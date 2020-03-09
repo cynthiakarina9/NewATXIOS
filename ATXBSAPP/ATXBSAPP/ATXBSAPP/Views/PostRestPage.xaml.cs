@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -49,7 +48,5 @@ namespace ATXBSAPP.Views
         {
             await Navigation.PushModalAsync(new NavigationPage(new WebPage()));
         }
-
-        
     }
 }

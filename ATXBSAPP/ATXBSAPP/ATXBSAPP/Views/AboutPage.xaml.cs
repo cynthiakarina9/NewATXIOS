@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,6 +19,11 @@ namespace ATXBSAPP.Views
         async void Chat_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new WebPage()));
-        }    
+        }
+
+        async void FB_Clicked(object sender, EventArgs e)
+        {
+            await Browser.OpenAsync("https://www.facebook.com/atxbusiness/");
+        }
     }
 }
