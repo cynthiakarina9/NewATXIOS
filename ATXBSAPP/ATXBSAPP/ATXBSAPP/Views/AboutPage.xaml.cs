@@ -25,5 +25,10 @@ namespace ATXBSAPP.Views
         {
             await Browser.OpenAsync("https://www.facebook.com/atxbusiness/");
         }
+
+        async void LinkDnk_Clicked(object sender, EventArgs e)
+        {
+            await Browser.OpenAsync("https://www.linkedin.com/company/atx-business-solutions/");
+        }
     }
 }
