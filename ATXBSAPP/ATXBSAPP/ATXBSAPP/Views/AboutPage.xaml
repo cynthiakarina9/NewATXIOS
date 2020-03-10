@@ -88,23 +88,16 @@
         </ScrollView>
 
         <ScrollView Grid.Row="6">
-            <StackLayout Orientation="Vertical" Padding="40,35,0,5" Spacing="60">
+            <StackLayout Orientation="Vertical" Padding="40,35,0,5" Spacing="10">
                 <Button ImageSource="LINKEDIN2.png" VerticalOptions="End" WidthRequest ="5" HeightRequest="5"  ContentLayout="Bottom,0" Clicked="LinkDnk_Clicked"/>
             </StackLayout>
         </ScrollView>
 
         <ScrollView Grid.Row="8">
-            <StackLayout Orientation="Horizontal" Padding="10,15,10,20" Spacing="10">
-                <Button ImageSource="TWITTER2.png" VerticalOptions="End" WidthRequest ="5" HeightRequest="5"  ContentLayout="Bottom,0" Clicked="LinkDnk_Clicked" Grid.RowSpan="2"/>
+            <StackLayout Orientation="Horizontal" Padding="40,35,10,20" Spacing="10">
+                <Button ImageSource="TWITTER2.png" VerticalOptions="End" WidthRequest ="5" HeightRequest="5"  ContentLayout="Bottom,0" Clicked="Twit_Clicked"/>
             </StackLayout>
         </ScrollView>
-
-        <ScrollView Grid.Row="9">
-            <StackLayout Orientation="Horizontal" Padding="10,15,10,20" Spacing="10">
-                <Button ImageSource="INSTAGRAM.png" VerticalOptions="End" WidthRequest ="5" HeightRequest="5"  ContentLayout="Bottom,0" Clicked="LinkDnk_Clicked" Grid.RowSpan="2"/>
-            </StackLayout>
-        </ScrollView>
-
     </Grid>
 
 
