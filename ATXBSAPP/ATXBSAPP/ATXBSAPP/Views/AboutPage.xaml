@@ -79,7 +79,7 @@
                     <Label.Text>
                         <x:String>
                             <![CDATA[
-                           <a href="https://www.facebook.com/atxbusiness/"><img scr=ATXBSAPP.Android/Resources/drawable/FACEBOOK22.jpg""></a>
+                           <a href="https://www.facebook.com/atxbusiness/"><img scr=https://atx.mx/wp-content/uploads/2020/03/IMAGEN-DESTACADA-AZURE.jpg""></a>
                          ]]>
                         </x:String>
                     </Label.Text>
