@@ -84,26 +84,10 @@
                         </x:String>
                     </Label.Text>
                 </Label>
-                <StackLayout Orientation="Horizontal" Padding="46,25,70,10" Spacing="10">
-                    <Button ImageSource="FACEBOOK22.png" VerticalOptions="End" WidthRequest ="20" HeightRequest="20"  ContentLayout="Bottom,0" Clicked="FB_Clicked"/>
-
-                    <Button ImageSource="LINKEDIN2.png" VerticalOptions="End" WidthRequest ="5" HeightRequest="5"  ContentLayout="Bottom,0" Clicked="LinkDnk_Clicked"/>
-
-                    <Button ImageSource="TWITTER2.png" VerticalOptions="End" WidthRequest ="5" HeightRequest="5"  ContentLayout="Bottom,0" Clicked="LinkDnk_Clicked" Grid.RowSpan="2"/>
-
-                    <Button ImageSource="INSTAGRAM.png" VerticalOptions="End" WidthRequest ="5" HeightRequest="5"  ContentLayout="Bottom,0" Clicked="LinkDnk_Clicked" Grid.RowSpan="2"/>
-                </StackLayout>
             </StackLayout>
 
         </ScrollView>
     </Grid>
-
-
-   
-       
-   
-
-  
 
 </ContentPage>
 
