@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="ATXBSAPP.Views.Store">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="chat.png" Clicked="Chat_Clicked" />
+        <ToolbarItem Icon="chatbot0.png" Clicked="Chat_Clicked" />
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>

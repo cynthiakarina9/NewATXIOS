@@ -21,10 +21,10 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackLayout  VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+        <StackLayout  VerticalOptions="End" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End">
                 <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                    <Image Source="logo_ATX.png" VerticalOptions="End" HeightRequest="40"/>
+                    <Image Source="logo_ATX.png" HeightRequest="60"/>
                 </ContentView>
             </StackLayout>
         </StackLayout>

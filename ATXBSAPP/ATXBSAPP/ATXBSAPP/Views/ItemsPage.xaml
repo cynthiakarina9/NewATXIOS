@@ -9,13 +9,13 @@
              x:Name="BrowseItemsPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="chat.png" Clicked="Chat_Clicked" />
+        <ToolbarItem Icon="chatbot0.png" Clicked="Chat_Clicked" />
     </ContentPage.ToolbarItems>
 
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Primary">#2196F3</Color>
-            <Color x:Key="Accent">#aedafc</Color>
+            <Color x:Key="Accent">#1906d0</Color>
             <Color x:Key="LightTextColor">#999999</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -28,12 +28,35 @@
         <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                 <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                    <Image Source="welcom.png" VerticalOptions="Center" HeightRequest="84" />
+                    <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="94" />
                 </ContentView>
             </StackLayout>
         </StackLayout>
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
+                <Label TextType="Html">
+                    <Label.Text>
+                        <x:String>
+                            <![CDATA[
+                            <h1 href="https://atx.mx/2020/02/27/aplicaciones-modernas-para-la-transformacion-de-su-negocio/">Explore el mundo de la informática en la nube y descubra qué es lo que diferencia a Azure</h1>
+                            ]]>
+                        </x:String>
+                    </Label.Text>
+                </Label>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                    <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                        <Image Source="WORK.jpg" VerticalOptions="Center" HeightRequest="250" />
+                    </ContentView>
+                </StackLayout>
+                <Label TextType="Html">
+                    <Label.Text>
+                        <x:String>
+                            <![CDATA[
+                                <h4>Evento en línea “Aplicaciones modernas para la transformación de su negocio”, Joaquin Vázquez Hernandez Líder de proyectos Microsoft 365 y Cristian Morales Gerente Comercial de Transformación Digital, nos presentan las aplicaciones más modernas y flexibles que puedes utilizar en tu negocio para dar el paso a la transformación digital. WorkAway Ofrece comunicaciones seguras, confiables […]27 febrero, 2020
+                             ]]>
+                        </x:String>
+                    </Label.Text>
+                </Label>
                 <Label FontSize="22">
                     <Label.FormattedText>
                         <FormattedString>
@@ -49,12 +72,7 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="Esta es una aplicacón creada por" />
-                                <Span Text=" " />
-                                <Span Text="ATX " FontAttributes="Bold" />
-                                <Span Text="en "/>
-                                <Span Text=" Xamarin Platform" FontAttributes="Bold" />
-                                <Span Text="." />
+                                <Span Text="Somos una empresa consultora especializada en la implementación de soluciones de gestión empresarial. Nuestro objetivo es poner en manos de empresarios como usted,herramientas de tecnología de software que le ayuden a conducir su compañía de manera más productiva e impulsen su crecimiento." />
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>
@@ -66,20 +84,15 @@
                                 <Span Text="Para mas información acerca de nuestra empresa consulte" />
                                 <Span Text=" Mas Información" FontAttributes="Bold" />
                                 <Span Text="."/>
-
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Button Grid.Row="0" Text="Support" Clicked="support_Clicked"
-                        BorderColor="#000000" BorderWidth="1" 
-                        FontAttributes="Bold" BackgroundColor="#7a8288" 
-                        BorderRadius="15" TextColor="White" 
-                        HorizontalOptions="End" WidthRequest="100" 
-                        HeightRequest="40" VerticalOptions="End"/>
-                
+                <Button Grid.Row="0" Text="Soporte" BorderColor="#000000" Clicked="support_Clicked"
+                BorderWidth="1" FontAttributes="Bold" BackgroundColor="#7a8288" 
+                BorderRadius="35" TextColor="White" HorizontalOptions="End" 
+                WidthRequest="120" HeightRequest="50" Margin="0,0,20,22" VerticalOptions="End"/>
             </StackLayout>
         </ScrollView>
     </Grid>
-
 </ContentPage>

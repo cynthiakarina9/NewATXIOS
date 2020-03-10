@@ -15,6 +15,7 @@ namespace ATXBSAPP.Views
     {
         public Frecuency()
         {
+            Title = "Preguntas frecuentes";
             InitializeComponent();
         }
 

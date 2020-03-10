@@ -6,17 +6,76 @@
              mc:Ignorable="d"
              x:Class="ATXBSAPP.Views.PostRestPage">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="chat.png" Clicked="Chat_Clicked" />
+        <ToolbarItem Icon="chatbot0.png" Clicked="Chat_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
-            <ListView x:Name="Post_List">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <TextCell Text="{Binding Title}" />
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                    <ContentView Padding="0,40,0,40" VerticalOptions="CenterAndExpand">
+                        <Image Source="DESTACADA.jpg" VerticalOptions="Center" HeightRequest="250" />
+                    </ContentView>
+                </StackLayout>
+                <Label TextType="Html">
+                    <Label.Text>
+                        <x:String>
+                            <![CDATA[
+                                <h1>Explore el mundo de la informática en la nube y descubra qué es lo que diferencia a Azure</h1>
+                                <p>Azure es un conjunto completo y en expansión constante de servicios de informática en la nube que ayudan a su organización a afrontar sus desafíos empresariales. Le ofrece la flexibilidad de crear, administrar e implementar aplicaciones en una red mundial enorme con las herramientas y las plataformas que prefiera.[…]</p>4 marzo, 2020
+                                <a href="https://atx.mx/2020/03/04/explore-el-mundo-de-la-informatica-en-la-nube-y-descubra-que-es-lo-que-diferencia-a-azure/"></a>
+                            ]]>
+                        </x:String>
+                    </Label.Text>
+                </Label>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                    <ContentView Padding="0,40,0,40" VerticalOptions="CenterAndExpand">
+                        <Image Source="WORK.jpg" VerticalOptions="Center" HeightRequest="250" />
+                    </ContentView>
+                </StackLayout>
+                <Label TextType="Html">
+                    <Label.Text>
+                        <x:String>
+                            <![CDATA[
+                                <h1>Explore el mundo de la informática en la nube y descubra qué es lo que diferencia a Azure</h1>
+                                <p>Evento en línea “Aplicaciones modernas para la transformación de su negocio”, Joaquin Vázquez Hernandez Líder de proyectos Microsoft 365 y Cristian Morales Gerente Comercial de Transformación Digital, nos presentan las aplicaciones más modernas y flexibles que puedes utilizar en tu negocio para dar el paso a la transformación digital. WorkAway Ofrece comunicaciones seguras, confiables […]</p>27 febrero, 2020
+                                <a href="https://atx.mx/2020/02/27/aplicaciones-modernas-para-la-transformacion-de-su-negocio/">Ver más</a>
+                             ]]>
+                        </x:String>
+                    </Label.Text>
+                </Label>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                    <ContentView Padding="0,40,0,40" VerticalOptions="CenterAndExpand">
+                        <Image Source="MICROSOFT.jpg" VerticalOptions="Center" HeightRequest="250" />
+                    </ContentView>
+                </StackLayout>
+                <Label TextType="Html">
+                    <Label.Text>
+                        <x:String>
+                            <![CDATA[
+                            <h1>Microsoft anuncia un plan de inversión de 1,100 millones de dólares para impulsar la transformación digital en México</h1>
+                            <p>El plan de inversión brindara servicios de nube desde centros de datos locales para contribuir al desarrollo del país, un sólido programa de educación y capacitación para apoyar la empleabilidad de cientos de miles de jóvenes, proyectos que utilizan inteligencia artificial para beneficiar a la sociedad y un Consejo Consultivo con importantes directivos como alunas […]</p>27 febrero, 2020
+                            <a href="https://atx.mx/2020/02/27/microsoft-anuncia-un-plan-de-inversion-de-1100-millones-de-dolares-para-impulsar-la-transformacion-digital-en-mexico/">Ver más</a>
+                             ]]>
+                        </x:String>
+                    </Label.Text>
+                </Label>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                    <ContentView Padding="0,40,0,40" VerticalOptions="CenterAndExpand">
+                        <Image Source="KUMDE.jpg" VerticalOptions="Center" HeightRequest="250" />
+                    </ContentView>
+                </StackLayout>
+                <Label TextType="Html">
+                    <Label.Text>
+                        <x:String>
+                            <![CDATA[
+                            <h1>Microsoft anuncia un plan de inversión de 1,100 millones de dólares para impulsar la transformación digital en México</h1>
+                            <p>No es ningún secreto que el trabajo y la vida se están acelerando. No es raro pasar todo el día en reuniones, escribiendo correos o hablando por teléfono, lo que deja poco tiempo para centrarte en lo que más te importa. Muchos tenemos listas interminables de tareas pendientes y pasamos tiempo trabajando fuera de […]</p>24 febrero, 2020
+                            <a href="https://atx.mx/2020/02/24/kunde-los-signos-vitales-de-su-empresa/">Ver más</a>
+                             ]]>
+                        </x:String>
+                    </Label.Text>
+                </Label>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

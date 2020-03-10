@@ -6,29 +6,25 @@
              mc:Ignorable="d"
              x:Class="ATXBSAPP.Views.Frecuency">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="chat.png" Clicked="Chat_Clicked" />
+        <ToolbarItem Icon="chatbot0.png" Clicked="Chat_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <ListView x:Name="ContextDemoList">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <ViewCell.ContextActions>
-                            <MenuItem Clicked="OnMore"
-                      CommandParameter="{Binding .}"
-                      Text="More" />
-                            <MenuItem Clicked="OnDelete"
-                      CommandParameter="{Binding .}"
-                      Text="Delete" IsDestructive="True" />
-                        </ViewCell.ContextActions>
-                        <StackLayout Padding="15,0">
-                            <Label Text="{Binding title}" />
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-
+        <StackLayout>
+            <Label TextType="Html">
+                <Label.Text>
+                    <x:String>
+                        <![CDATA[
+                            <h1 color="navy">¿Qué beneficios obtengo al contratar un plan de soporte?</h1><br>
+                            <FONT>Atencion directa de un ingeniero de soporte. Evitar cualquier tramite o proceso comercial. Paga solo el tiempo consumido en la resolucion de su caso.</FONT><br>
+                            <h1 color="blue">¿Dónde puedo encontrar documentacion o guias sobre NAV/BC?</h1><br>
+                            <a href="https://docs.microsoft.com/es-mx/dynamics365/business-central/index">https://docs.microsoft.com/es-mx/dynamics365/business-central/index</a><br>
+                            <h1 color="blue">¿Con que PACs para el addon de FE ATX han trabajado?</h1><br>
+                            <FONT>FEL, Folios Digitales, Facture Ya, Factura inteligente, Edicom,Ekomercio, Invoice One, Dfacture</FONT><br>
+                        ]]>
+                    </x:String>
+                </Label.Text>
+            </Label>
+        </StackLayout>
     </ContentPage.Content>
 
        

@@ -24,9 +24,9 @@ namespace ATXBSAPP.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PostRestPage : ContentPage
     {
-        private const string url = "https://jsonplaceholder.typicode.com/posts";
+        /*private const string url = "https://jsonplaceholder.typicode.com/posts";
         private HttpClient _Client = new HttpClient();
-        private ObservableCollection<Post> _post;
+        private ObservableCollection<Post>_post;*/
 
         public PostRestPage()
         {
@@ -34,7 +34,7 @@ namespace ATXBSAPP.Views
             InitializeComponent();
         }
 
-        protected override async void OnAppearing()
+        /*protected override async void OnAppearing()
 
         {
             var content = await _Client.GetStringAsync(url);
@@ -42,7 +42,7 @@ namespace ATXBSAPP.Views
             _post = new ObservableCollection<Post>(post);
             Post_List.ItemsSource = _post;
             base.OnAppearing();
-        }
+        }*/
 
         async void Chat_Clicked(object sender, EventArgs e)
         {
