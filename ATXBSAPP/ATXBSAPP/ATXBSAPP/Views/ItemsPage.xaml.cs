@@ -11,6 +11,7 @@ using ATXBSAPP.Models;
 using ATXBSAPP.Views;
 using ATXBSAPP.ViewModels;
 using Xamarin.Essentials;
+using System.Windows.Input;
 
 namespace ATXBSAPP.Views
 {
@@ -20,12 +21,13 @@ namespace ATXBSAPP.Views
     public partial class ItemsPage : ContentPage
     {
         ItemsViewModel viewModel;
-
+        public ICommand TapCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url));
         public ItemsPage()
         {
             InitializeComponent();
 
             BindingContext = viewModel = new ItemsViewModel();
+            BindingContext = this;
         }
 
         /*async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)

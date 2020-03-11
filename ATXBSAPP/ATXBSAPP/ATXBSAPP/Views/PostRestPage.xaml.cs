@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,11 +21,12 @@ namespace ATXBSAPP.Views
         /*private const string url = "https://jsonplaceholder.typicode.com/posts";
         private HttpClient _Client = new HttpClient();
         private ObservableCollection<Post>_post;*/
-       
+        public ICommand TapCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url));
         public PostRestPage()
         {
             Title = "Noticias";
             InitializeComponent();
+            BindingContext = this;
         }
 
         /*protected override async void OnAppearing()

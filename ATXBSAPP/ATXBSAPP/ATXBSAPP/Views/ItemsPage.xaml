@@ -50,15 +50,20 @@
                         <Image Source="WORK.jpg" VerticalOptions="Center" HeightRequest="250" />
                     </ContentView>
                 </StackLayout>
-                <Label TextType="Html">
-                    <Label.Text>
-                        <x:String>
-                            <![CDATA[
-                                <h4>Evento en línea “Aplicaciones modernas para la transformación de su negocio”, Joaquin Vázquez Hernandez Líder de proyectos Microsoft 365 y Cristian Morales Gerente Comercial de Transformación Digital, nos presentan las aplicaciones más modernas y flexibles que puedes utilizar en tu negocio para dar el paso a la transformación digital. WorkAway Ofrece comunicaciones seguras, confiables […]</h4>
-                                <a href="https://atx.mx/2020/02/27/aplicaciones-modernas-para-la-transformacion-de-su-negocio/">Ver más</a> 27 febrero, 2020
-                             ]]>
-                        </x:String>
-                    </Label.Text>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Evento en línea 'Aplicaciones modernas para la transformación de su negocio', Joaquin Vázquez Hernandez Líder de proyectos Microsoft 365 y Cristian Morales Gerente Comercial de Transformación Digital, nos presentan las aplicaciones más modernas y flexibles que puedes utilizar en tu negocio para dar el paso a la transformación digital. WorkAway Ofrece comunicaciones seguras, confiables […]"/>
+                            <Span Text="27 febrero, 2020 " />
+                            <Span Text="Ver más"
+                  TextColor="Blue">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://atx.mx/2020/02/27/aplicaciones-modernas-para-la-transformacion-de-su-negocio/" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
                 </Label>
                 <Label FontSize="22">
                     <Label.FormattedText>
