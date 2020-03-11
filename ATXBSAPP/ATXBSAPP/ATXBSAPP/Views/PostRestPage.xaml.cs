@@ -1,12 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -27,7 +19,7 @@ namespace ATXBSAPP.Views
         /*private const string url = "https://jsonplaceholder.typicode.com/posts";
         private HttpClient _Client = new HttpClient();
         private ObservableCollection<Post>_post;*/
-
+       
         public PostRestPage()
         {
             Title = "Noticias";

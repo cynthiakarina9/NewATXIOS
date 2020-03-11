@@ -7,17 +7,17 @@
              x:Class="ATXBSAPP.Views.AboutPage"
              xmlns:vm="clr-namespace:ATXBSAPP.ViewModels"
              Title="{Binding Title}">
-    
+
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
     </ContentPage.BindingContext>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="chat.png" Clicked="Chat_Clicked" />
+        <ToolbarItem Icon="chatbot0.png" Clicked="Chat_Clicked" />
     </ContentPage.ToolbarItems>
-    
+
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Primary">#007bbf</Color>
             <Color x:Key="Accent">#96d1ff</Color>
             <Color x:Key="LightTextColor">#999999</Color>
         </ResourceDictionary>
@@ -28,12 +28,9 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                    <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64" />
-                </ContentView>
-            </StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+            <Image Source="IMG1.jpg"></Image>
+
         </StackLayout>
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
@@ -79,33 +76,8 @@
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
             </StackLayout>
-        </ScrollView>
-    
-        <ScrollView Grid.Row="5">
-            <StackLayout Orientation="Horizontal" Padding="46,25,70,10" Spacing="10">
-                <Button ImageSource="FACEBOOK22.png" VerticalOptions="End" WidthRequest ="20" HeightRequest="20"  ContentLayout="Bottom,0" Clicked="FB_Clicked"/>
-            </StackLayout>
-        </ScrollView>
 
-        <ScrollView Grid.Row="6">
-            <StackLayout Orientation="Vertical" Padding="40,35,0,5" Spacing="60">
-                <Button ImageSource="LINKEDIN2.png" VerticalOptions="End" WidthRequest ="5" HeightRequest="5"  ContentLayout="Bottom,0" Clicked="LinkDnk_Clicked"/>
-            </StackLayout>
         </ScrollView>
-
-        <ScrollView Grid.Row="8">
-            <StackLayout Orientation="Horizontal" Padding="10,15,10,20" Spacing="10">
-                <Button ImageSource="TWITTER2.png" VerticalOptions="End" WidthRequest ="5" HeightRequest="5"  ContentLayout="Bottom,0" Clicked="LinkDnk_Clicked" Grid.RowSpan="2"/>
-            </StackLayout>
-        </ScrollView>
-
-        <ScrollView Grid.Row="9">
-            <StackLayout Orientation="Horizontal" Padding="10,15,10,20" Spacing="10">
-                <Button ImageSource="INSTAGRAM.png" VerticalOptions="End" WidthRequest ="5" HeightRequest="5"  ContentLayout="Bottom,0" Clicked="LinkDnk_Clicked" Grid.RowSpan="2"/>
-            </StackLayout>
-        </ScrollView>
-
     </Grid>
-
-
 </ContentPage>
+

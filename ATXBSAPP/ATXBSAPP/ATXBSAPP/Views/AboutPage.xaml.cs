@@ -30,5 +30,7 @@ namespace ATXBSAPP.Views
         {
             await Browser.OpenAsync("https://www.linkedin.com/company/atx-business-solutions/");
         }
+
+
     }
 }

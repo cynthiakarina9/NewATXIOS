@@ -15,7 +15,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Primary">#2196F3</Color>
-            <Color x:Key="Accent">#1906d0</Color>
+            <Color x:Key="Accent">#007bbf</Color>
             <Color x:Key="LightTextColor">#999999</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -25,6 +25,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+        
         <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                 <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
@@ -32,13 +33,14 @@
                 </ContentView>
             </StackLayout>
         </StackLayout>
+            
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
                 <Label TextType="Html">
                     <Label.Text>
                         <x:String>
                             <![CDATA[
-                            <h1 href="https://atx.mx/2020/02/27/aplicaciones-modernas-para-la-transformacion-de-su-negocio/">Explore el mundo de la informática en la nube y descubra qué es lo que diferencia a Azure</h1>
+                            <h1>Explore el mundo de la informática en la nube y descubra qué es lo que diferencia a Azure</h1>
                             ]]>
                         </x:String>
                     </Label.Text>
@@ -52,7 +54,8 @@
                     <Label.Text>
                         <x:String>
                             <![CDATA[
-                                <h4>Evento en línea “Aplicaciones modernas para la transformación de su negocio”, Joaquin Vázquez Hernandez Líder de proyectos Microsoft 365 y Cristian Morales Gerente Comercial de Transformación Digital, nos presentan las aplicaciones más modernas y flexibles que puedes utilizar en tu negocio para dar el paso a la transformación digital. WorkAway Ofrece comunicaciones seguras, confiables […]27 febrero, 2020
+                                <h4>Evento en línea “Aplicaciones modernas para la transformación de su negocio”, Joaquin Vázquez Hernandez Líder de proyectos Microsoft 365 y Cristian Morales Gerente Comercial de Transformación Digital, nos presentan las aplicaciones más modernas y flexibles que puedes utilizar en tu negocio para dar el paso a la transformación digital. WorkAway Ofrece comunicaciones seguras, confiables […]</h4>
+                                <a href="https://atx.mx/2020/02/27/aplicaciones-modernas-para-la-transformacion-de-su-negocio/">Ver más</a> 27 febrero, 2020
                              ]]>
                         </x:String>
                     </Label.Text>
@@ -88,11 +91,13 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Button Grid.Row="0" Text="Soporte" BorderColor="#000000" Clicked="support_Clicked"
+            </StackLayout>
+
+        </ScrollView>
+        
+        <Button Grid.Row="1" Text="Soporte" BorderColor="#000000" Clicked="support_Clicked"
                 BorderWidth="1" FontAttributes="Bold" BackgroundColor="#7a8288" 
                 BorderRadius="35" TextColor="White" HorizontalOptions="End" 
-                WidthRequest="120" HeightRequest="50" Margin="0,0,20,22" VerticalOptions="End"/>
-            </StackLayout>
-        </ScrollView>
+                WidthRequest="90" HeightRequest="40" Margin="0,0,20,22" VerticalOptions="End"/>
     </Grid>
 </ContentPage>
