@@ -25,7 +25,7 @@ namespace ATXBSAPP.Views
                 new HomeMenuItem {Id = MenuItemType.About, Title="Acerca de" },
                 new HomeMenuItem {Id = MenuItemType.News, Title="Noticias" },
                 new HomeMenuItem {Id = MenuItemType.Store, Title="Tienda" },
-                new HomeMenuItem {Id = MenuItemType.Frecuency, Title="Preguntas frecuentes" },
+                new HomeMenuItem {Id = MenuItemType.Frecuency, Title="Preguntas frecuentes" }
             };
 
             ListViewMenu.ItemsSource = menuItems;
@@ -39,6 +39,10 @@ namespace ATXBSAPP.Views
                 var id = (int)((HomeMenuItem)e.SelectedItem).Id;
                 await RootPage.NavigateFromMenu(id);
             };
+        }
+        async void Chat_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new WebPage()));
         }
     }
 }
