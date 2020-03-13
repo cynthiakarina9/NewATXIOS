@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -6,30 +10,16 @@ using Xamarin.Forms.Xaml;
 
 namespace ATXBSAPP.Views
 {
-    public class Post
-
-    {
-        public int userId { get; set; }
-        public int id { get; set; }
-        public string title { get; set; }
-        public string body { get; set; }
-    }
-
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PostRestPage : ContentPage
+    public partial class Webinar : ContentPage
     {
-        /*private const string url = "https://jsonplaceholder.typicode.com/posts";
-        private HttpClient _Client = new HttpClient();
-        private ObservableCollection<Post>_post;*/
         public ICommand TapCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url));
-        public PostRestPage()
+        public Webinar()
         {
-            Title = "Noticias";
             InitializeComponent();
             BindingContext = this;
+            Title = "Webinars";
         }
-
-       
 
         async void Chat_Clicked(object sender, EventArgs e)
         {

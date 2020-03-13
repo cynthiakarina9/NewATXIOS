@@ -8,24 +8,52 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Icon="chatbot0.png" Clicked="Chat_Clicked" />
     </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label TextType="Html">
-                <Label.Text>
-                    <x:String>
-                        <![CDATA[
+      
+           
+            <StackLayout>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+
+                <Image Source="HOME.png" VerticalOptions="Center"/>
+
+            </StackLayout>
+            <ScrollView Grid.Row="1">
+                <StackLayout>
+                    <Label TextType="Html">
+                    <Label.Text>
+                        <x:String>
+                            <![CDATA[
                             <h1 color="navy">¿Qué beneficios obtengo al contratar un plan de soporte?</h1><br>
                             <FONT>Atencion directa de un ingeniero de soporte. Evitar cualquier tramite o proceso comercial. Paga solo el tiempo consumido en la resolucion de su caso.</FONT><br>
-                            <h1 color="blue">¿Dónde puedo encontrar documentacion o guias sobre NAV/BC?</h1><br>
-                            <a href="https://docs.microsoft.com/es-mx/dynamics365/business-central/index">https://docs.microsoft.com/es-mx/dynamics365/business-central/index</a><br>
                             <h1 color="blue">¿Con que PACs para el addon de FE ATX han trabajado?</h1><br>
                             <FONT>FEL, Folios Digitales, Facture Ya, Factura inteligente, Edicom,Ekomercio, Invoice One, Dfacture</FONT><br>
                         ]]>
-                    </x:String>
-                </Label.Text>
-            </Label>
-        </StackLayout>
-    </ContentPage.Content>
+                        </x:String>
+                    </Label.Text>
+                </Label>
 
-       
+
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="¿Dónde puedo encontrar documentacion o guias sobre NAV/BC?" FontSize="Large" TextColor="Black"></Span>
+                                <Span Text=" "></Span>
+                                <Span Text="https://docs.microsoft.com/es-mx/dynamics365/business-central/index"
+                  TextColor="Blue">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://docs.microsoft.com/es-mx/dynamics365/business-central/index" />
+                                    </Span.GestureRecognizers>
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </ScrollView>
+            </StackLayout>
+      
+    </ContentPage.Content>
+    
+
 </ContentPage>

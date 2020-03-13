@@ -29,7 +29,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-            <Image Source="IMG1.jpg"></Image>
+            <Image Source="ACERCADE.pgn"></Image>
 
         </StackLayout>
         <ScrollView Grid.Row="1">
