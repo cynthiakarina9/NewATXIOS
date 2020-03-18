@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
-using ATXBSAPP.Models;
-using ATXBSAPP.Views;
 using ATXBSAPP.ViewModels;
 using Xamarin.Essentials;
 using System.Windows.Input;

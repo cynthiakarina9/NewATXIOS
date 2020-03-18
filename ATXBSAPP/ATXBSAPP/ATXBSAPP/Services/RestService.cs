@@ -1,58 +1,24 @@
 ﻿
-using Newtonsoft.Json;
-using System;
-using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Threading.Tasks;
 using System.Xml;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
-namespace ATXBSAPP.Views
+namespace ATXBSAPP.Services
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Promotions : ContentPage
+    public class RestService
     {
+        HttpClient _client;
 
-         /*private const string url = "https://jsonplaceholder.typicode.com/posts";
-        private HttpClient _Client = new HttpClient();
-        private ObservableCollection<Post>_post;*/
-        public Promotions()
+        public RestService()
         {
-            Title = "Promociones";
-            InitializeComponent();
+            _client = new HttpClient();
         }
-
-        async void Chat_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new NavigationPage(new WebPage()));
-        }
-
-        async void OnButtonClicked(object sender, EventArgs e)
-        {
-
-            string url = "https://atx.api.crm.dynamics.com/api/data/v9.1/adx_ads";
-            WeatherData weatherData = await GetWeatherDataAsync(url);
-            BindingContext = weatherData;
-
-        }
-        /*protected override async void OnAppearing()
-
-       {
-           var content = await _Client.GetStringAsync(url);
-           var post = JsonConvert.DeserializeObject<List<Post>>(content);
-           _post = new ObservableCollection<Post>(post);
-           Post_List.ItemsSource = _post;
-           base.OnAppearing();
-       }*/
         static string serviceUri = "https://atx.crm.dynamics.com/";
         static string redirectUrl = "https://atx.api.crm.dynamics.com/api/data/v9.1/";
-        public async Task<WeatherData> GetWeatherDataAsync(string uri)
+        /*public async Task<NewsViewModel> GetNewsViewModel(string uri)
         {
-            WeatherData weatherData = null;
+            NewsViewModel weatherData = null;
             try
             {
                 string authToken = InvokeService();
@@ -80,8 +46,8 @@ namespace ATXBSAPP.Views
                 }
 
 
-                weatherData = JsonConvert.DeserializeObject<WeatherData>(json);
-                weatherData = weatherData;
+                weatherData = JsonConvert.DeserializeObject<NewsViewModel>(json);
+                //weatherData = weatherData;
             }
             catch (Exception ex)
             {
@@ -89,7 +55,8 @@ namespace ATXBSAPP.Views
             }
 
             return weatherData;
-        }
+        }*/
+
         public string InvokeService()
         {
             //Calling CreateSOAPWebRequest method  
@@ -116,6 +83,7 @@ namespace ATXBSAPP.Views
             {
                 using (StreamReader rd = new StreamReader(Serviceres.GetResponseStream()))
                 {
+
                     //reading stream  
                     var ServiceResult = rd.ReadToEnd();
                     //writting stream result on console  
@@ -133,6 +101,7 @@ namespace ATXBSAPP.Views
                 }
             }
         }
+
         public HttpWebRequest CreateSOAPWebRequest()
         {
             //Making Web Request  

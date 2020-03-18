@@ -1,10 +1,8 @@
-﻿using Android.Provider;
-using ATXBSAPP.Models;
+﻿using ATXBSAPP.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace ATXBSAPP.Views
 {
