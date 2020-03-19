@@ -117,7 +117,6 @@
     <BundleResource Include="Resources\tab_feed.png" />
     <BundleResource Include="Resources\tab_feed%402x.png" />
     <BundleResource Include="Resources\tab_feed%403x.png" />
-    <BundleResource Include="Resources\xamarin_logo.png" />
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -131,6 +130,9 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="MySql.Data">
+      <Version>8.0.19</Version>
+    </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.3</Version>
     </PackageReference>
@@ -139,6 +141,9 @@
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.396" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
+    <PackageReference Include="Xamarin.MySql.Data">
+      <Version>1.0.1</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -151,18 +156,51 @@
     <BundleResource Include="Resources\WORK.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\HOME-2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\KUMDE.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\MICROSOFT.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\NOTICIAS-2.png" />
+    <BundleResource Include="Resources\xamarin_logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\PREGUNTAS-FRECUENTES.png" />
+    <BundleResource Include="Resources\YT22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ACERCADE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\chatbot0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DESTACADA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\FACEBOOK22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\HOME22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\IMG1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\INSTAGRAM22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo_ATX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\NOTICIAS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PREGUNTASFRECUENTES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\promocion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TWITTER22.png" />
   </ItemGroup>
 </Project>
