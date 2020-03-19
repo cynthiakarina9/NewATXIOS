@@ -128,12 +128,13 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-               <StackLayout>
-                    <Label>
+                <Label>
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="Ver más noticias"
-                  TextColor="Pink">
+                            <Span Text="
+                                            "/>
+                            <Span Text="Ver más noticias..."
+                  TextColor="Blue" FontSize="Small" FontFamily="Blod">
                                     <Span.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding TapCommand}"
                                           CommandParameter="https://atx.mx/news" />
@@ -141,8 +142,7 @@
                                 </Span>
                             </FormattedString>
                         </Label.FormattedText>
-                    </Label>
-                </StackLayout> 
+                    </Label> 
             </StackLayout>
             
         </ScrollView>

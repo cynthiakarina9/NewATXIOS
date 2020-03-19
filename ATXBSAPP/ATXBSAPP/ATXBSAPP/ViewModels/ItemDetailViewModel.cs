@@ -1,8 +1,4 @@
-﻿using System;
-using System.Windows.Input;
-using ATXBSAPP.Models;
-using Xamarin.Essentials;
-using Xamarin.Forms;
+﻿using ATXBSAPP.Models;
 
 namespace ATXBSAPP.ViewModels
 {
