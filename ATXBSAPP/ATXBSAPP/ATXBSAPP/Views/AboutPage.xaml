@@ -23,70 +23,74 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-            <Image Source="ACERCADE.pgn"></Image>
+    
+        <ScrollView Grid.Row="0">
+            <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+                    <Image Source="ACERCADE.pgn"></Image>
+                </StackLayout>
 
-        </StackLayout>
-        <ScrollView Grid.Row="1">
-            <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
-                <Label FontSize="22">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="Atx Business Solutions" FontAttributes="Bold" FontSize="22" />
-                                <Span Text=" " />
-                                <Span Text="1.0" ForegroundColor="{StaticResource LightTextColor}" />
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Label>
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="Esta es una aplicacón creada por" />
-                                <Span Text=" " />
-                                <Span Text="ATX " FontAttributes="Bold" />
-                                <Span Text="en "/>
-                                <Span Text=" Xamarin Platform" FontAttributes="Bold" />
-                                <Span Text="." />
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Label>
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="Para mas información acerca de nuestra empresa consulte" />
-                                <Span Text=" Mas Información" FontAttributes="Bold" />
-                                <Span Text="."/>
+                <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10" Grid.Row="1">
+                    <Label FontSize="22">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Atx Business Solutions" FontAttributes="Bold" FontSize="22" />
+                                    <Span Text=" " />
+                                    <Span Text="1.0" ForegroundColor="{StaticResource LightTextColor}" />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Esta es una aplicacón creada por" />
+                                    <Span Text=" " />
+                                    <Span Text="ATX " FontAttributes="Bold" />
+                                    <Span Text="en "/>
+                                    <Span Text=" Xamarin Platform" FontAttributes="Bold" />
+                                    <Span Text="." />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Para mas información acerca de nuestra empresa consulte" />
+                                    <Span Text=" Mas Información" FontAttributes="Bold" />
+                                    <Span Text="."/>
 
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Button Margin="0,10,0,0" Text="Mas Informacion"
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Button Margin="0,10,0,0" Text="Mas Informacion"
                         Command="{Binding OpenWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White"/>
-                <StackLayout>
-                    
+                    <StackLayout>
+
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Button ImageSource="FACEBOOK.png" Clicked="FB_Clicked" BackgroundColor="Transparent"/>
+                        <Button ImageSource="LINKEDIN.png" Clicked="LinkDnk_Clicked" BackgroundColor="Transparent"/>
+                        <Button ImageSource="INSTAGRAM.png" Clicked="Instagram_Clicked" BackgroundColor="Transparent"/>
+                        <Button ImageSource="TWITTER.png" Clicked="Twitter_Clicked" BackgroundColor="Transparent"/>
+                        <Button ImageSource="YT.png" Clicked="YT_Clicked" BackgroundColor="Transparent"/>
+                    </StackLayout>
                 </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Button ImageSource="FACEBOOK22.png" Clicked="FB_Clicked" HeightRequest="20"/>
-                    <Button ImageSource="LINKEDIN22.png" Clicked="LinkDnk_Clicked"/>
-                    <Button ImageSource="INSTAGRAM22.png" Clicked="Instagram_Clicked"/>
-                    <Button ImageSource="TWITTER22.png" Clicked="Twitter_Clicked"/>
-                    <Button ImageSource="YT22.png" Clicked="YT_Clicked"/>
-                </StackLayout>
+                </Grid>
             </StackLayout>
         </ScrollView>
-    </Grid>
+    
 </ContentPage>
 

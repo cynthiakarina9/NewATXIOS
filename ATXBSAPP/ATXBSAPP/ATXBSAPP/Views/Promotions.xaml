@@ -9,20 +9,9 @@
         <ToolbarItem Icon="chatbot0.png" Clicked="Chat_Clicked" />
     </ContentPage.ToolbarItems>
     <Grid>
-        <Entry x:Name="cityEntry"
-               Grid.ColumnSpan="2"
-               Text="Buscador" />
-        <Button Grid.ColumnSpan="2"
-                Grid.Row="1"
-                Text=" Consulta"
-                BackgroundColor="GreenYellow"
-                Clicked="OnButtonClicked" />
-
-        <Label Grid.Row="2"
-               Text="prueba:" />
         <Label Grid.Row="2"
                Grid.Column="1"
-               Text="{Binding Value[0].Adx_name}" />
+               Text="{Binding [0].atx_name}" />
     </Grid>
    
 </ContentPage>

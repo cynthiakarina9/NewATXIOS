@@ -23,6 +23,8 @@ namespace ATXBSAPP.Views
                 new HomeMenuItem {Id = MenuItemType.About, Title="Acerca de" },
                 new HomeMenuItem {Id = MenuItemType.News, Title="Noticias" },
                 new HomeMenuItem {Id = MenuItemType.Store, Title="Tienda" },
+                new HomeMenuItem {Id = MenuItemType.Webinar, Title="Webinars" },
+                new HomeMenuItem {Id = MenuItemType.Promotions, Title="Promociones" },
                 new HomeMenuItem {Id = MenuItemType.Frecuency, Title="Preguntas frecuentes" }
             };
 

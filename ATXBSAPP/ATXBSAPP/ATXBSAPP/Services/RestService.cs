@@ -1,10 +1,22 @@
-﻿
-using System.IO;
+﻿using System;
+using System.Diagnostics;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using System.Net.Http.Headers;
+using Newtonsoft.Json.Linq;
+//using Microsoft.Xrm.Tooling.Connector;
+using System.Configuration;
+using System.IO;
 using System.Xml;
+using System.Text;
+using System.Collections.Generic;
+using ATXBSAPP.ViewModels;
+using ATXBSAPP.Views;
+using static ATXBSAPP.ViewModels.NewsViewModel;
 
-namespace ATXBSAPP.Services
+namespace ATXAPP
 {
     public class RestService
     {
@@ -13,16 +25,16 @@ namespace ATXBSAPP.Services
         public RestService()
         {
             _client = new HttpClient();
+
         }
         static string serviceUri = "https://atx.crm.dynamics.com/";
         static string redirectUrl = "https://atx.api.crm.dynamics.com/api/data/v9.1/";
-        /*public async Task<NewsViewModel> GetNewsViewModel(string uri)
+        List<ValueN> res = null;
+        public async Task<List<ValueN>> GetWeatherDataAsync()
         {
-            NewsViewModel weatherData = null;
             try
             {
                 string authToken = InvokeService();
-
                 HttpClient httpClient = null;
                 httpClient = new HttpClient();
                 //Default Request Headers needed to be added in the HttpClient Object
@@ -32,30 +44,126 @@ namespace ATXBSAPP.Services
 
                 //Set the Authorization header with the Access Token received specifying the Credentials
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authToken);
-
                 httpClient.BaseAddress = new Uri(redirectUrl);
-                var responses = httpClient.GetAsync("adx_ads?$select=adx_name,createdon").Result;
-                var accounts = "";
-                dynamic json = "";
+                HttpResponseMessage responses = await httpClient.GetAsync("adx_ads?$select=*");
+                responses.EnsureSuccessStatusCode();
+                string json = "";
                 if (responses.IsSuccessStatusCode)
                 {
-                    accounts = responses.Content.ReadAsStringAsync().Result;
-                    json = JsonConvert.DeserializeObject(accounts);
+                    json = await responses.Content.ReadAsStringAsync();
+
 
                     Console.WriteLine("OK");
                 }
 
+                JObject information = JObject.Parse(json);
 
-                weatherData = JsonConvert.DeserializeObject<NewsViewModel>(json);
-                //weatherData = weatherData;
+                string json2 = JsonConvert.SerializeObject(information["value"]);
+
+
+                res = (List<ValueN>)JsonConvert.DeserializeObject(json2, typeof(List<ValueN>));
+
+
+
+                Console.WriteLine("ok");
             }
             catch (Exception ex)
             {
                 Debug.WriteLine("\tERROR {0}", ex.Message);
             }
 
-            return weatherData;
-        }*/
+            return res;
+        }
+
+        public async Task<List<ValueN>> GetWeatherData2Async()
+        {
+            try
+            {
+                string authToken = InvokeService();
+                HttpClient httpClient = null;
+                httpClient = new HttpClient();
+                //Default Request Headers needed to be added in the HttpClient Object
+                httpClient.DefaultRequestHeaders.Add("OData-MaxVersion", "4.0");
+                httpClient.DefaultRequestHeaders.Add("OData-Version", "4.0");
+                httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                //Set the Authorization header with the Access Token received specifying the Credentials
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authToken);
+                httpClient.BaseAddress = new Uri(redirectUrl);
+                HttpResponseMessage responses = await httpClient.GetAsync("atx_promocions?$select=*");
+                responses.EnsureSuccessStatusCode();
+                string json = "";
+                if (responses.IsSuccessStatusCode)
+                {
+                    json = await responses.Content.ReadAsStringAsync();
+
+
+                    Console.WriteLine("OK");
+                }
+
+                JObject information = JObject.Parse(json);
+
+                string json2 = JsonConvert.SerializeObject(information["value"]);
+
+
+                res = (List<ValueN>)JsonConvert.DeserializeObject(json2, typeof(List<ValueN>));
+
+
+
+                Console.WriteLine("ok");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("\tERROR {0}", ex.Message);
+            }
+
+            return res;
+        }
+
+        public async Task<List<ValueN>> GetWeatherData3Async()
+        {
+            try
+            {
+                string authToken = InvokeService();
+                HttpClient httpClient = null;
+                httpClient = new HttpClient();
+                //Default Request Headers needed to be added in the HttpClient Object
+                httpClient.DefaultRequestHeaders.Add("OData-MaxVersion", "4.0");
+                httpClient.DefaultRequestHeaders.Add("OData-Version", "4.0");
+                httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                //Set the Authorization header with the Access Token received specifying the Credentials
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authToken);
+                httpClient.BaseAddress = new Uri(redirectUrl);
+                HttpResponseMessage responses = await httpClient.GetAsync("atx_webinars?$select=*");
+                responses.EnsureSuccessStatusCode();
+                string json = "";
+                if (responses.IsSuccessStatusCode)
+                {
+                    json = await responses.Content.ReadAsStringAsync();
+
+
+                    Console.WriteLine("OK");
+                }
+
+                JObject information = JObject.Parse(json);
+
+                string json2 = JsonConvert.SerializeObject(information["value"]);
+
+
+                res = (List<ValueN>)JsonConvert.DeserializeObject(json2, typeof(List<ValueN>));
+
+
+
+                Console.WriteLine("ok");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("\tERROR {0}", ex.Message);
+            }
+
+            return res;
+        }
 
         public string InvokeService()
         {
@@ -105,7 +213,7 @@ namespace ATXBSAPP.Services
         public HttpWebRequest CreateSOAPWebRequest()
         {
             //Making Web Request  
-            HttpWebRequest Req = (HttpWebRequest)WebRequest.Create(@"http://instancia-tess.azurewebsites.net/adx_ads.asmx");
+            HttpWebRequest Req = (HttpWebRequest)WebRequest.Create(@"http://atxcrmws.azurewebsites.net/adx_ads.asmx");
             //SOAPAction  
             Req.Headers.Add(@"SOAPAction:http://tempuri.org/token");
             //Content_type  
