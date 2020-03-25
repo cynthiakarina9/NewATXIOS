@@ -18,11 +18,11 @@ using static ATXBSAPP.ViewModels.NewsViewModel;
 
 namespace ATXAPP
 {
-    public class RestService
+    public class RestServiceWebinar
     {
         HttpClient _client;
 
-        public RestService()
+        public RestServiceWebinar()
         {
             _client = new HttpClient();
 
@@ -30,7 +30,8 @@ namespace ATXAPP
         static string serviceUri = "https://atx.crm.dynamics.com/";
         static string redirectUrl = "https://atx.api.crm.dynamics.com/api/data/v9.1/";
         List<ValueN> res = null;
-        public async Task<List<ValueN>> GetWeatherDataAsync()
+        
+        public async Task<List<ValueN>> GetWeatherData3Async()
         {
             try
             {
@@ -45,12 +46,13 @@ namespace ATXAPP
                 //Set the Authorization header with the Access Token received specifying the Credentials
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authToken);
                 httpClient.BaseAddress = new Uri(redirectUrl);
-                HttpResponseMessage responses = await httpClient.GetAsync("adx_ads?$select=adx_name,new_descripcion,adx_releasedate,new_urlimagen,new_linkpost,createdby");
+                HttpResponseMessage responses = await httpClient.GetAsync("atx_webinarss?$select=atx_name,atx_descripcion,atx_fechadeinicio,atx_fechadefinalizacion,atx_linkderegistro,createdby");
                 responses.EnsureSuccessStatusCode();
                 string json = "";
                 if (responses.IsSuccessStatusCode)
                 {
                     json = await responses.Content.ReadAsStringAsync();
+
 
                     Console.WriteLine("OK");
                 }

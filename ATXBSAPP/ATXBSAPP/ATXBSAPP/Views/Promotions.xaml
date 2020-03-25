@@ -9,9 +9,57 @@
         <ToolbarItem Icon="chatbot0.png" Clicked="Chat_Clicked" />
     </ContentPage.ToolbarItems>
     <Grid>
-        <Label Grid.Row="2"
-               Grid.Column="1"
-               Text="{Binding [0].atx_name}" />
+        <ScrollView>
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                </Grid>
+                <StackLayout  HorizontalOptions="FillAndExpand" Grid.Row="0">
+                    <Image Source="ACERCADE.pgn"></Image>
+                </StackLayout>
+                <StackLayout BackgroundColor="LightPink">
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="{Binding [0].atx_name}" FontSize="Large" TextColor="Orange"/>
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="{Binding [0].atx_descripcion}"/>
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="{Binding [0].atx_validadesde}"/>
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="{Binding [0].atx_validahasta}"/>
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </Grid>
    
 </ContentPage>

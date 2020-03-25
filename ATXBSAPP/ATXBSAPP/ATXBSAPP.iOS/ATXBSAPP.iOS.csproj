@@ -207,4 +207,22 @@
   <ItemGroup>
     <BundleResource Include="Resources\TWITTER22.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TWITTER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\YT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\FACEBOOK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\INSTAGRAM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\LINKEDIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\HOME.png" />
+  </ItemGroup>
 </Project>

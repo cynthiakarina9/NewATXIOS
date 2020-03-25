@@ -21,53 +21,62 @@
     </ContentPage.Resources>
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-         <StackLayout  HorizontalOptions="FillAndExpand">
-                    <Image Source="HOME22.png" HeightRequest="200" WidthRequest="150"/>
-                </StackLayout>
-        <ScrollView Grid.Row="1">
+        <ScrollView>
             <StackLayout>
-               
-                <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
-                    <Label TextType="Html">
-                        <Label.Text>
-                            <x:String>
-                                <![CDATA[
-                            <h1>Explore el mundo de la informática en la nube y descubra qué es lo que diferencia a Azure</h1>
-                            ]]>
-                            </x:String>
-                        </Label.Text>
-                    </Label>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                </Grid>
+                <StackLayout  HorizontalOptions="FillAndExpand" Grid.Row="0">
+                    <Image Source="HOME22.png"/>
+                </StackLayout>
+                <StackLayout>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
                         <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                            <Image Source="WORK.jpg" VerticalOptions="Center" HeightRequest="250" />
+                            <Image Source="{Binding [0].new_urlimagen}" />
                         </ContentView>
                     </StackLayout>
                     <Label>
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="Evento en línea 'Aplicaciones modernas para la transformación de su negocio', Joaquin Vázquez Hernandez Líder de proyectos Microsoft 365 y Cristian Morales Gerente Comercial de Transformación Digital, nos presentan las aplicaciones más modernas y flexibles que puedes utilizar en tu negocio para dar el paso a la transformación digital. WorkAway Ofrece comunicaciones seguras, confiables […]"/>
-                                <Span Text="27 febrero, 2020 " />
+                                <FormattedString.Spans>
+                                    <Span Text="{Binding [0].adx_name}" FontSize="Large" TextColor="DarkBlue"/>
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="{Binding [0].new_descripcion}" TextColor="Black"/>
+                                    <Span Text="{Binding [0].adx_releasedate}" />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
                                 <Span Text="Ver más"
                   TextColor="Blue">
                                     <Span.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding TapCommand}"
-                                          CommandParameter="https://atx.mx/2020/02/27/aplicaciones-modernas-para-la-transformacion-de-su-negocio/" />
+                                        <TapGestureRecognizer  Command="{Binding TapCommand}"
+                                          CommandParameter="{Binding [0].new_linkpost}" />
                                     </Span.GestureRecognizers>
                                 </Span>
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Label FontSize="22">
+                </StackLayout>
+                <StackLayout BackgroundColor="LightBlue">
+                    <Label>
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="Atx Business Solutions" FontAttributes="Bold" FontSize="22" />
-                                    <Span Text=" " />
-                                    <Span Text="1.0" ForegroundColor="{StaticResource LightTextColor}" />
+                                    <Span Text="{Binding [0].atx_name}" FontSize="Large"/>
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
@@ -76,7 +85,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="Somos una empresa consultora especializada en la implementación de soluciones de gestión empresarial. Nuestro objetivo es poner en manos de empresarios como usted,herramientas de tecnología de software que le ayuden a conducir su compañía de manera más productiva e impulsen su crecimiento." />
+                                    <Span Text="{Binding [0].atx_descripcion}"/>
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
@@ -85,18 +94,90 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="Para mas información acerca de nuestra empresa consulte" />
-                                    <Span Text=" Mas Información" FontAttributes="Bold" />
-                                    <Span Text="."/>
+                                    <Span Text="{Binding [0].atx_validadesde}"/>
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="{Binding [0].atx_validahasta}"/>
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
                 </StackLayout>
+                <Button Text="Ver Webinars" Clicked="Webinars_Clicked" BackgroundColor="#007bbf" TextColor="White" HorizontalOptions="End" 
+                WidthRequest="180" HeightRequest="40" Margin="0,0,20,22"/>
+                <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
+                            <Label TextType="Html">
+                                <Label.Text>
+                                    <x:String>
+                                        <![CDATA[
+                            <h1>Explore el mundo de la informática en la nube y descubra qué es lo que diferencia a Azure</h1>
+                            ]]>
+                                    </x:String>
+                                </Label.Text>
+                            </Label>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                                    <Image Source="WORK.jpg" VerticalOptions="Center" HeightRequest="250" />
+                                </ContentView>
+                            </StackLayout>
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Evento en línea 'Aplicaciones modernas para la transformación de su negocio', Joaquin Vázquez Hernandez Líder de proyectos Microsoft 365 y Cristian Morales Gerente Comercial de Transformación Digital, nos presentan las aplicaciones más modernas y flexibles que puedes utilizar en tu negocio para dar el paso a la transformación digital. WorkAway Ofrece comunicaciones seguras, confiables […]"/>
+                                        <Span Text="27 febrero, 2020 " />
+                                        <Span Text="Ver más"
+                  TextColor="Blue">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://atx.mx/2020/02/27/aplicaciones-modernas-para-la-transformacion-de-su-negocio/" />
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label FontSize="22">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="Atx Business Solutions" FontAttributes="Bold" FontSize="22" />
+                                            <Span Text=" " />
+                                            <Span Text="1.0" ForegroundColor="{StaticResource LightTextColor}" />
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="Somos una empresa consultora especializada en la implementación de soluciones de gestión empresarial. Nuestro objetivo es poner en manos de empresarios como usted,herramientas de tecnología de software que le ayuden a conducir su compañía de manera más productiva e impulsen su crecimiento." />
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="Para mas información acerca de nuestra empresa consulte" />
+                                            <Span Text=" Mas Información" FontAttributes="Bold" />
+                                            <Span Text="."/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    
+                
             </StackLayout>
         </ScrollView>
-        
-        <Button Grid.Row="1" Text="Soporte" BorderColor="#000000" Clicked="support_Clicked"
+        <Button Grid.Row="0" Text="Soporte" BorderColor="#000000" Clicked="support_Clicked"
                 BorderWidth="1" FontAttributes="Bold" BackgroundColor="#7a8288" 
                 BorderRadius="35" TextColor="White" HorizontalOptions="End" 
                 WidthRequest="90" HeightRequest="40" Margin="0,0,20,22" VerticalOptions="End"/>

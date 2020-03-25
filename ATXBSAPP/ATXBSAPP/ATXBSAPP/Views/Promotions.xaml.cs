@@ -12,12 +12,12 @@ namespace ATXBSAPP.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Promotions : ContentPage
     {
-        RestService _restService;
+        RestServicePromo _restService;
         public Promotions()
         {
             Title = "Promociones";
             InitializeComponent();
-            _restService = new RestService();
+            _restService = new RestServicePromo();
         }
 
         async void Chat_Clicked(object sender, EventArgs e)

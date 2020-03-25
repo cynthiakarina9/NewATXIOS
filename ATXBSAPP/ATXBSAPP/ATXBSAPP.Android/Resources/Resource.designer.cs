@@ -8310,46 +8310,46 @@ namespace ATXBSAPP.Droid
 			public const int FACEBOOK = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int HOME22 = 2131165286;
+			public const int HOME = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int ic_mtrl_chip_checked_black = 2131165287;
+			public const int HOME22 = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int ic_mtrl_chip_checked_circle = 2131165288;
+			public const int ic_mtrl_chip_checked_black = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int ic_mtrl_chip_close_circle = 2131165289;
+			public const int ic_mtrl_chip_checked_circle = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int IMG1 = 2131165290;
+			public const int ic_mtrl_chip_close_circle = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int INSTAGRAM = 2131165291;
+			public const int IMG1 = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int KUMDE = 2131165292;
+			public const int INSTAGRAM = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int LINKEDIN = 2131165293;
+			public const int KUMDE = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int logo_ATX = 2131165294;
+			public const int LINKEDIN = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int MICROSOFT = 2131165295;
+			public const int logo_ATX = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int mtrl_snackbar_background = 2131165296;
+			public const int MICROSOFT = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int mtrl_tabs_default_indicator = 2131165297;
+			public const int mtrl_snackbar_background = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int navigation_empty_icon = 2131165298;
+			public const int mtrl_tabs_default_indicator = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int NOTICIAS22 = 2131165299;
+			public const int navigation_empty_icon = 2131165299;
 			
 			// aapt resource value: 0x7F070074
 			public const int notification_action_background = 2131165300;

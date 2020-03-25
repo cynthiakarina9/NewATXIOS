@@ -9,21 +9,137 @@
         <ToolbarItem Icon="chatbot0.png" Clicked="Chat_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <ScrollView Grid.Row="0">
+        <ScrollView>
             <StackLayout>
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-                        <Image Source="NOTICIAS22.pgn"></Image>
-                    </StackLayout>
-                    <StackLayout Grid.Row="1">
-                        <Label Grid.Row="2"
-               Grid.Column="1"
-               Text="{Binding [0].adx_name}" />
 
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="0">
+                        <ContentView Padding="0,40,0,40" VerticalOptions="CenterAndExpand">
+                            <Image Source="NOTICIAS.pgn"/>
+                        </ContentView>
+                    </StackLayout>
+                    <StackLayout>
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                            <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                                <Image Source="{Binding [0].new_urlimagen}" />
+                            </ContentView>
+                        </StackLayout>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="{Binding [0].adx_name}" FontSize="Large" TextColor="DarkBlue"/>
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="{Binding [0].new_descripcion}" TextColor="Black"/>
+                                        <Span Text="{Binding [0].adx_releasedate}" />
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Ver más"
+                  TextColor="Blue">
+                                        <Span.GestureRecognizers>
+                                            <TapGestureRecognizer  Command="{Binding TapCommand}"
+                                          CommandParameter="{Binding [0].new_linkpost}" />
+                                        </Span.GestureRecognizers>
+                                    </Span>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                            <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                                <Image Source="{Binding [0].new_urlimagen}" />
+                            </ContentView>
+                        </StackLayout>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="{Binding [1].adx_name}" FontSize="Large" TextColor="DarkBlue"/>
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="{Binding [1].new_descripcion}" TextColor="Black"/>
+                                        <Span Text="{Binding [1].adx_releasedate}" />
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Ver más"
+                  TextColor="Blue">
+                                        <Span.GestureRecognizers>
+                                            <TapGestureRecognizer  Command="{Binding TapCommand}"
+                                          CommandParameter="{Binding [1].new_linkpost}" />
+                                        </Span.GestureRecognizers>
+                                    </Span>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                            <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                                <Image Source="{Binding [2].new_urlimagen}" />
+                            </ContentView>
+                        </StackLayout>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="{Binding [2].adx_name}" FontSize="Large" TextColor="DarkBlue"/>
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="{Binding [2].new_descripcion}" TextColor="Black"/>
+                                        <Span Text="{Binding [2].adx_releasedate}" />
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Ver más"
+                  TextColor="Blue">
+                                        <Span.GestureRecognizers>
+                                            <TapGestureRecognizer  Command="{Binding TapCommand}"
+                                          CommandParameter="{Binding [2].new_linkpost}" />
+                                        </Span.GestureRecognizers>
+                                    </Span>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
                     </StackLayout>
                 </Grid>
             </StackLayout>

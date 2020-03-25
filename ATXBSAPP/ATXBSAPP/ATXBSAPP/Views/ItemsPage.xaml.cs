@@ -4,6 +4,9 @@ using Xamarin.Forms;
 using ATXBSAPP.ViewModels;
 using Xamarin.Essentials;
 using System.Windows.Input;
+using ATXAPP;
+using System.Collections.Generic;
+using static ATXBSAPP.ViewModels.NewsViewModel;
 
 namespace ATXBSAPP.Views
 {
@@ -14,34 +17,36 @@ namespace ATXBSAPP.Views
     {
         ItemsViewModel viewModel;
         public ICommand TapCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url));
+        RestService _restService;
         public ItemsPage()
         {
             InitializeComponent();
 
             BindingContext = viewModel = new ItemsViewModel();
             BindingContext = this;
+            _restService = new RestService();
         }
 
-        /*async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+        protected override async void OnAppearing()
         {
-            var item = args.SelectedItem as Item;
-            if (item == null)
-                return;
+            List<ValueN> weatherData = await _restService.GetWeatherDataAsync();
+            BindingContext = weatherData;
+            OnAppearing();
 
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
-
-            // Manually deselect item.
-            ItemsListView.SelectedItem = null;
-        }*/
+        }
 
         async void Chat_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new WebPage()));
         }
 
+        async void Webinars_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new Webinar()));
+        }
         async void support_Clicked(object sender, EventArgs e)
         {
-            await Browser.OpenAsync("https://atx.crm.dynamics.com/main.aspx?appid=cfdbc5f7-d0fc-e911-a814-000d3a1b142f&pagetype=dashboard&id=e6941e88-d854-e911-a97e-000d3a19907d&type=system&_canOverride=true");
+            await Browser.OpenAsync("https://soporte.atx.com.mx");
         }
 
 

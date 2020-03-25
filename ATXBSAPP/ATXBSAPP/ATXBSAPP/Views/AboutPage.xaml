@@ -23,18 +23,18 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    
-        <ScrollView Grid.Row="0">
+    <Grid>
+        <ScrollView>
             <StackLayout>
-            <Grid>
-                <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                </Grid>
+                <StackLayout VerticalOptions="Fill" HorizontalOptions="FillAndExpand" Grid.Row="0">
                     <Image Source="ACERCADE.pgn"></Image>
                 </StackLayout>
-
                 <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10" Grid.Row="1">
                     <Label FontSize="22">
                         <Label.FormattedText>
@@ -77,20 +77,18 @@
                         Command="{Binding OpenWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White"/>
-                    <StackLayout>
+                
 
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Button ImageSource="FACEBOOK.png" Clicked="FB_Clicked" BackgroundColor="Transparent"/>
-                        <Button ImageSource="LINKEDIN.png" Clicked="LinkDnk_Clicked" BackgroundColor="Transparent"/>
-                        <Button ImageSource="INSTAGRAM.png" Clicked="Instagram_Clicked" BackgroundColor="Transparent"/>
-                        <Button ImageSource="TWITTER.png" Clicked="Twitter_Clicked" BackgroundColor="Transparent"/>
-                        <Button ImageSource="YT.png" Clicked="YT_Clicked" BackgroundColor="Transparent"/>
-                    </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button ImageSource="FACEBOOK.png" Clicked="FB_Clicked" BackgroundColor="Transparent"/>
+                    <Button ImageSource="LINKEDIN.png" Clicked="LinkDnk_Clicked" BackgroundColor="Transparent"/>
+                    <Button ImageSource="INSTAGRAM.png" Clicked="Instagram_Clicked" BackgroundColor="Transparent"/>
+                    <Button ImageSource="TWITTER.png" Clicked="Twitter_Clicked" BackgroundColor="Transparent"/>
+                    <Button ImageSource="YT.png" Clicked="YT_Clicked" BackgroundColor="Transparent"/>
                 </StackLayout>
-                </Grid>
+            </StackLayout>
             </StackLayout>
         </ScrollView>
-    
+    </Grid>
 </ContentPage>
 
