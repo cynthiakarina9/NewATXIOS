@@ -12,6 +12,7 @@ namespace ATXBSAPP.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Promotions : ContentPage
     {
+        public List<ValueN> weatherData = new List<ValueN>();
         RestServicePromo _restService;
         public Promotions()
         {
@@ -28,9 +29,14 @@ namespace ATXBSAPP.Views
         protected override async void OnAppearing()
         {
             string url = "http://atxcrmws.azurewebsites.net/adx_ads.asmx";
-            List<ValueN> weatherData = await _restService.GetWeatherData2Async();
-            BindingContext = weatherData;
-            OnAppearing();
+            
+            
+            if (weatherData.Count < 1)
+            {
+                weatherData = await _restService.GetWeatherData2Async();
+                BindingContext = weatherData;
+                OnAppearing();
+            }                   
         }
     }
 }

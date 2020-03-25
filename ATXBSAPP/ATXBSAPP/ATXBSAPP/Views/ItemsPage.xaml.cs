@@ -15,25 +15,38 @@ namespace ATXBSAPP.Views
     [DesignTimeVisible(false)]
     public partial class ItemsPage : ContentPage
     {
+        public List<ValueN> weatherData = new List<ValueN>();
+        public List<ValueN> weatherData2 = new List<ValueN>();
+        public List<ValueN> weatherData3 = new List<ValueN>();
         ItemsViewModel viewModel;
+
         public ICommand TapCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url));
+        RestServicePromo _restService2;
         RestService _restService;
         public ItemsPage()
         {
             InitializeComponent();
 
-            BindingContext = viewModel = new ItemsViewModel();
+            //BindingContext = viewModel = new ItemsViewModel();
             BindingContext = this;
+            _restService2 = new RestServicePromo();
             _restService = new RestService();
         }
 
         protected override async void OnAppearing()
         {
-            List<ValueN> weatherData = await _restService.GetWeatherDataAsync();
-            BindingContext = weatherData;
-            OnAppearing();
-
+            if (weatherData.Count == 0)
+            {
+                weatherData = await _restService.GetWeatherDataAsync();
+                BindingContext = weatherData;
+                weatherData2 = await _restService2.GetWeatherData2Async();
+                BindingContext = weatherData2;
+                OnAppearing();
+            }
+            
         }
+
+
 
         async void Chat_Clicked(object sender, EventArgs e)
         {

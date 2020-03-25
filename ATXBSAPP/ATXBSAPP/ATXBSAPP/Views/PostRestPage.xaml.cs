@@ -9,11 +9,10 @@ using static ATXBSAPP.ViewModels.NewsViewModel;
 
 namespace ATXBSAPP.Views
 {
-    
-
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PostRestPage : ContentPage
     {
+        public List<ValueN> weatherData = new List<ValueN>();
         /*private const string url = "https://jsonplaceholder.typicode.com/posts";
         private HttpClient _Client = new HttpClient();
         private ObservableCollection<Post>_post;*/
@@ -29,10 +28,14 @@ namespace ATXBSAPP.Views
 
         protected override async void OnAppearing()
         {
-            string url = "http://atxcrmws.azurewebsites.net/adx_ads.asmx";
-            List<ValueN> weatherData = await _restService.GetWeatherDataAsync();
-            BindingContext = weatherData;
-            OnAppearing();
+            string url = "http://atxcrmws.azurewebsites.net/adx_ads.asmx";           
+
+            if (weatherData.Count < 1)
+            {
+                weatherData = await _restService.GetWeatherDataAsync();
+                BindingContext = weatherData;
+                OnAppearing();
+            }
         }
         async void Chat_Clicked(object sender, EventArgs e)
         {

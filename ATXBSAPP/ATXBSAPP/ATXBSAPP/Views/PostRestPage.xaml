@@ -65,7 +65,7 @@
                     <StackLayout>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
                             <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                                <Image Source="{Binding [0].new_urlimagen}" />
+                                <Image Source="{Binding [1].new_urlimagen}" />
                             </ContentView>
                         </StackLayout>
                         <Label>

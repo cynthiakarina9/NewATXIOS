@@ -74,6 +74,50 @@ namespace ATXAPP
             return res;
         }
 
+        public async Task<List<ValueN>> GetWeatherData2Async()
+        {
+            try
+            {
+                string authToken = InvokeService();
+                HttpClient httpClient = null;
+                httpClient = new HttpClient();
+                //Default Request Headers needed to be added in the HttpClient Object
+                httpClient.DefaultRequestHeaders.Add("OData-MaxVersion", "4.0");
+                httpClient.DefaultRequestHeaders.Add("OData-Version", "4.0");
+                httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                //Set the Authorization header with the Access Token received specifying the Credentials
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authToken);
+                httpClient.BaseAddress = new Uri(redirectUrl);
+                HttpResponseMessage responses = await httpClient.GetAsync("atx_promocions?$select=atx_name,atx_descripcion,atx_validadesde,atx_validahasta,createdby");
+                responses.EnsureSuccessStatusCode();
+                string json = "";
+                if (responses.IsSuccessStatusCode)
+                {
+                    json = await responses.Content.ReadAsStringAsync();
+
+
+                    Console.WriteLine("OK");
+                }
+
+                JObject information = JObject.Parse(json);
+
+                string json2 = JsonConvert.SerializeObject(information["value"]);
+
+
+                res = (List<ValueN>)JsonConvert.DeserializeObject(json2, typeof(List<ValueN>));
+
+
+
+                Console.WriteLine("ok");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("\tERROR {0}", ex.Message);
+            }
+
+            return res;
+        }
         public string InvokeService()
         {
             //Calling CreateSOAPWebRequest method  

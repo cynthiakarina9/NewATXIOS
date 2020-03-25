@@ -12,6 +12,7 @@ namespace ATXBSAPP.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Webinar : ContentPage
     {
+        public List<ValueN> weatherData = new List<ValueN>();
         public ICommand TapCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url));
         RestServiceWebinar _restService;
         public Webinar()
@@ -24,10 +25,12 @@ namespace ATXBSAPP.Views
 
         protected override async void OnAppearing()
         {
-            string url = "http://atxcrmws.azurewebsites.net/adx_ads.asmx";
-            List<ValueN> weatherData = await _restService.GetWeatherData3Async();
-            BindingContext = weatherData;
-            OnAppearing();
+            if (weatherData.Count < 1)
+            {
+                weatherData = await _restService.GetWeatherData3Async();
+                BindingContext = weatherData;
+                OnAppearing();
+            }
         }
         async void Chat_Clicked(object sender, EventArgs e)
         {
