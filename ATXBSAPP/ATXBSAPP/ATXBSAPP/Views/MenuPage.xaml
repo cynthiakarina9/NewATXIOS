@@ -40,6 +40,7 @@
                         <x:String>Item 5</x:String>
                         <x:String>Item 6</x:String>
                         <x:String>Item 7</x:String>
+                        <x:String>Item 8</x:String>
                     </x:Array>
                 </d:ListView.ItemsSource>
                 <ListView.ItemTemplate>

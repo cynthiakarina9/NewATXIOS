@@ -55,11 +55,11 @@
                     <Label>
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="Registrate"
-                  TextColor="Blue">
+                                <Span Text="Link de registro"
+                  TextColor="Blue" FontSize="Body">
                                     <Span.GestureRecognizers>
-                                        <TapGestureRecognizer  Command="{Binding TapCommand}"
-                                          CommandParameter="{Binding [0].atx_linkderegistro}" />
+                                        <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="{Binding [0].atx_linkderegistro}"/>
                                     </Span.GestureRecognizers>
                                 </Span>
                             </FormattedString>

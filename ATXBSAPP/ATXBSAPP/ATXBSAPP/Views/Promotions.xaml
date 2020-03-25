@@ -20,12 +20,12 @@
                 <StackLayout  HorizontalOptions="FillAndExpand" Grid.Row="0">
                     <Image Source="ACERCADE.pgn"></Image>
                 </StackLayout>
-                <StackLayout BackgroundColor="LightPink">
+                <StackLayout BackgroundColor="#b7cedf7a">
                     <Label>
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="{Binding [0].atx_name}" FontSize="Large" TextColor="Orange"/>
+                                    <Span Text="{Binding [0].atx_name}" FontSize="Large" TextColor="DarkBlue"/>
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
@@ -34,7 +34,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="{Binding [0].atx_descripcion}"/>
+                                    <Span Text="{Binding [0].atx_descripcion}" TextColor="Black"/>
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
@@ -43,6 +43,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
+                                    <Span Text="Valido desde: " TextColor="Black" FontAttributes="Bold"/>
                                     <Span Text="{Binding [0].atx_validadesde}"/>
                                 </FormattedString.Spans>
                             </FormattedString>
@@ -52,7 +53,128 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
+                                    <Span Text="Valido hasta: " TextColor="Black" FontAttributes="Bold"/>
                                     <Span Text="{Binding [0].atx_validahasta}"/>
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+                <StackLayout BackgroundColor="#d2e5f47a">
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="{Binding [1].atx_name}" FontSize="Large" TextColor="DarkBlue"/>
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="{Binding [1].atx_descripcion}" TextColor="Black"/>
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Valido desde: " TextColor="Black" FontAttributes="Bold"/>
+                                    <Span Text="{Binding [1].atx_validadesde}"/>
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Valido hasta: " TextColor="Black" FontAttributes="Bold"/>
+                                    <Span Text="{Binding [1].atx_validahasta}"/>
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+                <StackLayout BackgroundColor="#a0bdd47a">
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="{Binding [2].atx_name}" FontSize="Large" TextColor="DarkBlue"/>
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="{Binding [2].atx_descripcion}" TextColor="Black"/>
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Valido desde: " TextColor="Black" FontAttributes="Bold"/>
+                                    <Span Text="{Binding [2].atx_validadesde}"/>
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Valido hasta: " TextColor="Black" FontAttributes="Bold"/>
+                                    <Span Text="{Binding [2].atx_validahasta}"/>
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+                <StackLayout BackgroundColor="#aedafc7a">
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="{Binding [3].atx_name}" FontSize="Large" TextColor="DarkBlue"/>
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="{Binding [3].atx_descripcion}" TextColor="Black"/>
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Valido desde: " TextColor="Black" FontAttributes="Bold"/>
+                                    <Span Text="{Binding [3].atx_validadesde}"/>
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Valido hasta: " TextColor="Black" FontAttributes="Bold"/>
+                                    <Span Text="{Binding [3].atx_validahasta}"/>
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>

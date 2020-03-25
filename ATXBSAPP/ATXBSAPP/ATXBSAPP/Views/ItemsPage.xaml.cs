@@ -17,7 +17,6 @@ namespace ATXBSAPP.Views
     {
         public List<ValueN> weatherData = new List<ValueN>();
         public List<ValueN> weatherData2 = new List<ValueN>();
-        public List<ValueN> weatherData3 = new List<ValueN>();
         ItemsViewModel viewModel;
 
         public ICommand TapCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url));
@@ -27,7 +26,7 @@ namespace ATXBSAPP.Views
         {
             InitializeComponent();
 
-            //BindingContext = viewModel = new ItemsViewModel();
+            BindingContext = viewModel = new ItemsViewModel();
             BindingContext = this;
             _restService2 = new RestServicePromo();
             _restService = new RestService();
@@ -38,9 +37,10 @@ namespace ATXBSAPP.Views
             if (weatherData.Count == 0)
             {
                 weatherData = await _restService.GetWeatherDataAsync();
-                BindingContext = weatherData;
                 weatherData2 = await _restService2.GetWeatherData2Async();
-                BindingContext = weatherData2;
+                
+                BindingContext = weatherData;
+                
                 OnAppearing();
             }
             

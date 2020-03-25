@@ -9,7 +9,7 @@
              x:Name="BrowseItemsPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="chatbot0.png" Clicked="Chat_Clicked" />
+        <ToolbarItem Icon="chatbot0.png" Clicked="Chat_Clicked" Order="Primary"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Resources>
@@ -33,11 +33,6 @@
                     <Image Source="HOME22.png"/>
                 </StackLayout>
                 <StackLayout>
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                        <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                            <Image Source="{Binding [0].new_urlimagen}" />
-                        </ContentView>
-                    </StackLayout>
                     <Label>
                         <Label.FormattedText>
                             <FormattedString>
@@ -47,6 +42,11 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                        <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                            <Image Source="{Binding [0].new_urlimagen}" />
+                        </ContentView>
+                    </StackLayout>
                     <Label>
                         <Label.FormattedText>
                             <FormattedString>
@@ -57,59 +57,8 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Ver más"
-                  TextColor="Blue">
-                                    <Span.GestureRecognizers>
-                                        <TapGestureRecognizer  Command="{Binding TapCommand}"
-                                          CommandParameter="{Binding [0].new_linkpost}" />
-                                    </Span.GestureRecognizers>
-                                </Span>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
                 </StackLayout>
-                <StackLayout BackgroundColor="LightBlue">
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <FormattedString.Spans>
-                                    <Span Text="{Binding [0].atx_name}" FontSize="Large"/>
-                                </FormattedString.Spans>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <FormattedString.Spans>
-                                    <Span Text="{Binding [0].atx_descripcion}"/>
-                                </FormattedString.Spans>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <FormattedString.Spans>
-                                    <Span Text="{Binding [0].atx_validadesde}"/>
-                                </FormattedString.Spans>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <FormattedString.Spans>
-                                    <Span Text="{Binding [0].atx_validahasta}"/>
-                                </FormattedString.Spans>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
-                <Button Text="Ver Webinars" Clicked="Webinars_Clicked" BackgroundColor="#007bbf" TextColor="White" HorizontalOptions="End" 
+                <Button Text="Ver Webinars" Clicked="Webinars_Clicked" BackgroundColor="#007bbf" TextColor="White" HorizontalOptions="Center" 
                 WidthRequest="180" HeightRequest="40" Margin="0,0,20,22"/>
                 
                 

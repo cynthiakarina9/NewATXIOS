@@ -12,8 +12,8 @@ namespace ATXBSAPP.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Webinar : ContentPage
     {
-        public List<ValueN> weatherData = new List<ValueN>();
         public ICommand TapCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url));
+        public List<ValueN> weatherData = new List<ValueN>();
         RestServiceWebinar _restService;
         public Webinar()
         {

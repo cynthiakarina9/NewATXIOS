@@ -15,49 +15,31 @@
             <StackLayout>
                 <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill" HeightRequest="150" WidthRequest="100">
                     <Image Source="HOME.png" VerticalOptions="Center" />
-                
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="¿Qué beneficios obtengo al contratar un plan de soporte?" FontSize="Large" TextColor="BlueViolet"></Span>
-                                <Span Text="
-                                               "></Span>
-                                <Span Text="
-                                               "></Span>
-                                <Span Text="Atencion directa de un ingeniero de soporte. Evitar cualquier tramite o proceso comercial. Paga solo el tiempo consumido en la resolucion de su caso." FontSize="Body"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="¿Con que PACs para el addon de FE ATX han trabajado?" FontSize="Large" TextColor="BlueViolet"></Span>
-                                <Span Text="
-                                               "></Span>
-                                <Span Text="
-                                               "></Span>
-                                <Span Text="FEL, Folios Digitales, Facture Ya, Factura inteligente, Edicom,Ekomercio, Invoice One, Dfacture" FontSize="Body"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="¿Dónde puedo encontrar documentacion o guias sobre NAV/BC?" FontSize="Large" TextColor="BlueViolet"></Span>
-                                <Span Text="
-                                               "></Span>
-                                <Span Text="
-                                               "></Span>
-                                <Span Text="https://docs.microsoft.com/es-mx/dynamics365/business-central/index"
+                    <StackLayout>
+                        <Label Text="¿Qué beneficios obtengo al contratar un plan de soporte?" FontSize="Large" TextColor="BlueViolet"/>
+                        <Label Text="Atencion directa de un ingeniero de soporte. Evitar cualquier tramite o proceso comercial. Paga solo el tiempo consumido en la resolucion de su caso." FontSize="Body"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="¿Con que PACs para el addon de FE ATX han trabajado?" FontSize="Large" TextColor="BlueViolet"/>
+                        <Label Text="FEL, Folios Digitales, Facture Ya, Factura inteligente, Edicom,Ekomercio, Invoice One, Dfacture" FontSize="Body"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="¿Dónde puedo encontrar documentacion o guias sobre NAV/BC?" FontSize="Large" TextColor="BlueViolet"/>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="https://docs.microsoft.com/es-mx/dynamics365/business-central/index"
                   TextColor="Blue" FontSize="Body">
-                                    <Span.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding TapCommand}"
+                                        <Span.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding TapCommand}"
                                           CommandParameter="https://docs.microsoft.com/es-mx/dynamics365/business-central/index"/>
-                                    </Span.GestureRecognizers>
-                                </Span>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+                                        </Span.GestureRecognizers>
+                                    </Span>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                    
                 </StackLayout>
             
             </StackLayout>

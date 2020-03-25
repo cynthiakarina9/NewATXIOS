@@ -23,123 +23,126 @@
                         </ContentView>
                     </StackLayout>
                     <StackLayout>
-                    <StackLayout>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                            <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                                <Image Source="{Binding [0].new_urlimagen}" />
-                            </ContentView>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                                <ContentView Padding="0,40,0,40" VerticalOptions="CenterAndExpand" >
+                                    <Image Source="{Binding [0].new_urlimagen}" />
+                                </ContentView>
+                            </StackLayout>
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="{Binding [0].adx_name}" FontSize="Large" TextColor="DarkBlue"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="{Binding [0].new_descripcion}" TextColor="Black"/>
+                                            <Span Text="{Binding [0].adx_releasedate}" />
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
                         </StackLayout>
-                        <Label>
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <FormattedString.Spans>
-                                        <Span Text="{Binding [0].adx_name}" FontSize="Large" TextColor="DarkBlue"/>
-                                    </FormattedString.Spans>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                        <Label>
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <FormattedString.Spans>
-                                        <Span Text="{Binding [0].new_descripcion}" TextColor="Black"/>
-                                        <Span Text="{Binding [0].adx_releasedate}" />
-                                    </FormattedString.Spans>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                        <Label>
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span Text="Ver más"
-                  TextColor="Blue">
-                                        <Span.GestureRecognizers>
-                                            <TapGestureRecognizer  Command="{Binding TapCommand}"
-                                          CommandParameter="{Binding [0].new_linkpost}" />
-                                        </Span.GestureRecognizers>
-                                    </Span>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                    </StackLayout>
-                    <StackLayout>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                            <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                                <Image Source="{Binding [1].new_urlimagen}" />
-                            </ContentView>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                                    <Image Source="{Binding [1].new_urlimagen}" />
+                                </ContentView>
+                            </StackLayout>
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="{Binding [1].adx_name}" FontSize="Large" TextColor="DarkBlue"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="{Binding [1].new_descripcion}" TextColor="Black"/>
+                                            <Span Text="{Binding [1].adx_releasedate}" />
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
                         </StackLayout>
-                        <Label>
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <FormattedString.Spans>
-                                        <Span Text="{Binding [1].adx_name}" FontSize="Large" TextColor="DarkBlue"/>
-                                    </FormattedString.Spans>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                        <Label>
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <FormattedString.Spans>
-                                        <Span Text="{Binding [1].new_descripcion}" TextColor="Black"/>
-                                        <Span Text="{Binding [1].adx_releasedate}" />
-                                    </FormattedString.Spans>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                        <Label>
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span Text="Ver más"
-                  TextColor="Blue">
-                                        <Span.GestureRecognizers>
-                                            <TapGestureRecognizer  Command="{Binding TapCommand}"
-                                          CommandParameter="{Binding [1].new_linkpost}" />
-                                        </Span.GestureRecognizers>
-                                    </Span>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                    </StackLayout>
-                    <StackLayout>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                            <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                                <Image Source="{Binding [2].new_urlimagen}" />
-                            </ContentView>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                                    <Image Source="{Binding [2].new_urlimagen}" />
+                                </ContentView>
+                            </StackLayout>
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="{Binding [2].adx_name}" FontSize="Large" TextColor="DarkBlue"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="{Binding [2].new_descripcion}" TextColor="Black"/>
+                                            <Span Text="{Binding [2].adx_releasedate}" />
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
                         </StackLayout>
-                        <Label>
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <FormattedString.Spans>
-                                        <Span Text="{Binding [2].adx_name}" FontSize="Large" TextColor="DarkBlue"/>
-                                    </FormattedString.Spans>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                        <Label>
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <FormattedString.Spans>
-                                        <Span Text="{Binding [2].new_descripcion}" TextColor="Black"/>
-                                        <Span Text="{Binding [2].adx_releasedate}" />
-                                    </FormattedString.Spans>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                        <Label>
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span Text="Ver más"
-                  TextColor="Blue">
-                                        <Span.GestureRecognizers>
-                                            <TapGestureRecognizer  Command="{Binding TapCommand}"
-                                          CommandParameter="{Binding [2].new_linkpost}" />
-                                        </Span.GestureRecognizers>
-                                    </Span>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                    </StackLayout>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                                <ContentView Padding="0,40,0,40" VerticalOptions="CenterAndExpand" >
+                                    <Image Source="{Binding [3].new_urlimagen}" />
+                                </ContentView>
+                            </StackLayout>
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="{Binding [3].adx_name}" FontSize="Large" TextColor="DarkBlue"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="{Binding [3].new_descripcion}" TextColor="Black"/>
+                                            <Span Text="{Binding [3].adx_releasedate}" />
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <StackLayout>
+                                <Label>
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Ver más noticias" TextColor="Blue">
+                                                <Span.GestureRecognizers>
+                                                    <TapGestureRecognizer  Command="{Binding TapCommand}"
+                                          CommandParameter="https://atx.mx/news/" />
+                                                </Span.GestureRecognizers>
+                                            </Span>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </StackLayout>
+                        </StackLayout>
                     </StackLayout>
                 </Grid>
             </StackLayout>

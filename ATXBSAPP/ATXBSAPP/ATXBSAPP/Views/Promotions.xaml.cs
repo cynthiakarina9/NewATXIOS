@@ -28,9 +28,6 @@ namespace ATXBSAPP.Views
 
         protected override async void OnAppearing()
         {
-            string url = "http://atxcrmws.azurewebsites.net/adx_ads.asmx";
-            
-            
             if (weatherData.Count < 1)
             {
                 weatherData = await _restService.GetWeatherData2Async();
