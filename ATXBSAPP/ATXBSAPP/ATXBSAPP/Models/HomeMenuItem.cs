@@ -9,8 +9,8 @@ namespace ATXBSAPP.Models
         News,
         Promotions,
         Store,
-        Frecuency,
-        Webinar
+        Webinar,
+        Frecuency
     }
     public class HomeMenuItem
     {

@@ -16,14 +16,15 @@ namespace ATXBSAPP.Views
         /*private const string url = "https://jsonplaceholder.typicode.com/posts";
         private HttpClient _Client = new HttpClient();
         private ObservableCollection<Post>_post;*/
-        public ICommand TapCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url));
+       
         RestService _restService; 
+        public ICommand TapCommand = new Command<string>(async (url) => await Launcher.OpenAsync(url));
         public PostRestPage()
         {
             Title = "Noticias";
             InitializeComponent();
-            BindingContext = this;
             _restService = new RestService();
+            BindingContext = this;
         }
 
         protected override async void OnAppearing()

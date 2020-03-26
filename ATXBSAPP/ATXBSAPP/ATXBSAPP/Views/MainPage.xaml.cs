@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-
+using ATXAPP;
 using ATXBSAPP.Models;
 
 namespace ATXBSAPP.Views
@@ -37,11 +37,14 @@ namespace ATXBSAPP.Views
                     case (int)MenuItemType.News:
                         MenuPages.Add(id, new NavigationPage(new PostRestPage()));
                         break;
-                    case (int)MenuItemType.Promotions:
-                        MenuPages.Add(id, new NavigationPage(new Promotions()));
-                        break;
                     case (int)MenuItemType.Store:
                         MenuPages.Add(id, new NavigationPage(new Store()));
+                        break;
+                    case (int)MenuItemType.Webinar:
+                        MenuPages.Add(id, new NavigationPage(new Webinar()));
+                        break;
+                    case (int)MenuItemType.Promotions:
+                        MenuPages.Add(id, new NavigationPage(new Promotions()));
                         break;
                     case (int)MenuItemType.Frecuency:
                         MenuPages.Add(id, new NavigationPage(new Frecuency()));

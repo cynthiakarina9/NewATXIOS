@@ -20,6 +20,10 @@ namespace ATXBSAPP.ViewModels
             public string atx_descripcion { get; set; }
             public string atx_validadesde { get; set; }
             public string atx_validahasta { get; set; }
+
+            public string atx_fechadeinicio { get; set; }
+            public string atx_fechadefinalizacion { get; set; }
+            public string atx_linkderegistro { get; set; }
         }
         public class RootObject
         {

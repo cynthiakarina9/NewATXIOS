@@ -26,12 +26,7 @@
     <Grid>
         <ScrollView>
             <StackLayout>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                </Grid>
+                
                 <StackLayout VerticalOptions="Fill" HorizontalOptions="FillAndExpand" Grid.Row="0">
                     <Image Source="ACERCADE.pgn"></Image>
                 </StackLayout>
@@ -80,12 +75,14 @@
                 
 
                 <StackLayout Orientation="Horizontal">
-                    <Button ImageSource="FACEBOOK.png" Clicked="FB_Clicked" BackgroundColor="Transparent"/>
-                    <Button ImageSource="LINKEDIN.png" Clicked="LinkDnk_Clicked" BackgroundColor="Transparent"/>
-                    <Button ImageSource="INSTAGRAM.png" Clicked="Instagram_Clicked" BackgroundColor="Transparent"/>
-                    <Button ImageSource="TWITTER.png" Clicked="Twitter_Clicked" BackgroundColor="Transparent"/>
-                    <Button ImageSource="YT.png" Clicked="YT_Clicked" BackgroundColor="Transparent"/>
-                </StackLayout>
+                        
+                    <Button ImageSource="FACEBOOK.png" Clicked="FB_Clicked" BackgroundColor="Transparent" Grid.Column="1"/>
+                        <Button ImageSource="LINKEDIN.png" Clicked="LinkDnk_Clicked" BackgroundColor="Transparent"  Grid.Column="2"/>
+                        <Button ImageSource="INSTAGRAM.png" Clicked="Instagram_Clicked" BackgroundColor="Transparent"  Grid.Column="3"/>
+                        <Button ImageSource="TWITTER.png" Clicked="Twitter_Clicked" BackgroundColor="Transparent"  Grid.Column="4"/>
+                        <Button ImageSource="YT.png" Clicked="YT_Clicked" BackgroundColor="Transparent"  Grid.Column="5"/>
+                        
+                    </StackLayout>
             </StackLayout>
             </StackLayout>
         </ScrollView>

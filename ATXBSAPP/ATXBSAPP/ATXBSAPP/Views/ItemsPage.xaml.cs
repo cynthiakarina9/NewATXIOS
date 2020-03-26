@@ -17,7 +17,8 @@ namespace ATXBSAPP.Views
     {
         public List<ValueN> weatherData = new List<ValueN>();
         public List<ValueN> weatherData2 = new List<ValueN>();
-        ItemsViewModel viewModel;
+        public List<ValueN> weatherData_conten = new List<ValueN>();
+
 
         public ICommand TapCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url));
         RestServicePromo _restService2;
@@ -25,8 +26,7 @@ namespace ATXBSAPP.Views
         public ItemsPage()
         {
             InitializeComponent();
-
-            BindingContext = viewModel = new ItemsViewModel();
+            Title = "Inicio";
             BindingContext = this;
             _restService2 = new RestServicePromo();
             _restService = new RestService();
@@ -38,6 +38,21 @@ namespace ATXBSAPP.Views
             {
                 weatherData = await _restService.GetWeatherDataAsync();
                 weatherData2 = await _restService2.GetWeatherData2Async();
+                /*
+                //noticias
+                weatherData_conten[0].adx_name = weatherData[0].adx_name;
+                weatherData_conten[0].new_descripcion = weatherData[0].new_descripcion;
+                weatherData_conten[0].adx_releasedate = weatherData[0].adx_releasedate;
+                weatherData_conten[0].new_urlimagen = weatherData[0].new_urlimagen;
+                weatherData_conten[0].new_linkpost = weatherData[0].new_linkpost;
+                weatherData_conten[0].createdby = weatherData[0].createdby;
+                //promocio
+                weatherData_conten[0].atx_name = weatherData2[0].atx_name;
+                weatherData_conten[0].atx_descripcion = weatherData2[0].atx_descripcion;
+                weatherData_conten[0].atx_validadesde = weatherData2[0].atx_validadesde;
+                weatherData_conten[0].atx_validahasta = weatherData2[0].atx_validahasta;*/
+
+                
                 
                 BindingContext = weatherData;
                 
@@ -53,7 +68,7 @@ namespace ATXBSAPP.Views
             await Navigation.PushModalAsync(new NavigationPage(new WebPage()));
         }
 
-        async void Webinars_Clicked(object sender, EventArgs e)
+        async void Webinar_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new Webinar()));
         }
@@ -62,14 +77,5 @@ namespace ATXBSAPP.Views
             await Browser.OpenAsync("https://soporte.atx.com.mx");
         }
 
-
-
-        /* protected override void OnAppearing()
-         {
-             base.OnAppearing();
-
-             if (viewModel.Items.Count == 0)
-                 viewModel.LoadItemsCommand.Execute(null);
-         }*/
     }
 }

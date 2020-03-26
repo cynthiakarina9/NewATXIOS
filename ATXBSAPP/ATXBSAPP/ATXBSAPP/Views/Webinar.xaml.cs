@@ -5,7 +5,7 @@ using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using static ATXBSAPP.ViewModels.NewsViewModel;
+using static ATXBSAPP.ViewModels.WebinarVewModel;
 
 namespace ATXBSAPP.Views
 {
@@ -13,7 +13,7 @@ namespace ATXBSAPP.Views
     public partial class Webinar : ContentPage
     {
         public ICommand TapCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url));
-        public List<ValueN> weatherData = new List<ValueN>();
+        public List<ValueW> weatherData3 = new List<ValueW>();
         RestServiceWebinar _restService;
         public Webinar()
         {
@@ -25,10 +25,10 @@ namespace ATXBSAPP.Views
 
         protected override async void OnAppearing()
         {
-            if (weatherData.Count < 1)
+            if (weatherData3.Count < 1)
             {
-                weatherData = await _restService.GetWeatherData3Async();
-                BindingContext = weatherData;
+                weatherData3 = await _restService.GetWeatherData3Async();
+                BindingContext = weatherData3;
                 OnAppearing();
             }
         }

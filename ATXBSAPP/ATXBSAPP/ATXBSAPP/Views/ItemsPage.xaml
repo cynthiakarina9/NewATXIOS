@@ -58,7 +58,7 @@
                         </Label.FormattedText>
                     </Label>
                 </StackLayout>
-                <Button Text="Ver Webinars" Clicked="Webinars_Clicked" BackgroundColor="#007bbf" TextColor="White" HorizontalOptions="Center" 
+                <Button Text="Ver Webinars" Clicked="Webinar_Clicked" BackgroundColor="#007bbf" TextColor="White" HorizontalOptions="Center" 
                 WidthRequest="180" HeightRequest="40" Margin="0,0,20,22"/>
                 
                 
