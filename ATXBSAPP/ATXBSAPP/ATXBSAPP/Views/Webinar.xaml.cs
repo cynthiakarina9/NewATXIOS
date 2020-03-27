@@ -12,7 +12,6 @@ namespace ATXBSAPP.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Webinar : ContentPage
     {
-        public ICommand TapCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url));
         public List<ValueW> weatherData3 = new List<ValueW>();
         RestServiceWebinar _restService;
         public Webinar()
@@ -20,7 +19,6 @@ namespace ATXBSAPP.Views
             InitializeComponent();
             Title = "Webinars";
             _restService = new RestServiceWebinar();
-            BindingContext = this;
         }
 
         protected override async void OnAppearing()
@@ -35,6 +33,10 @@ namespace ATXBSAPP.Views
         async void Chat_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new WebPage()));
+        }
+        async void Link1_Clicked(object sender, EventArgs e)
+        {
+            await Browser.OpenAsync("https://www.atx.mx/news");
         }
     }
 }

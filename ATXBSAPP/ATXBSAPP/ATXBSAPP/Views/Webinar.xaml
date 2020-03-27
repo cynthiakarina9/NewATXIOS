@@ -20,7 +20,16 @@
                             <Label.FormattedText>
                                 <FormattedString>
                                     <FormattedString.Spans>
-                                        <Span Text="{Binding [0].atx_name}" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+                                        <Span Text="{Binding [0].atx_name}" FontSize="Large" TextColor="DarkOrange" FontAttributes="Bold"/>
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label HorizontalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="{Binding [0].atx_descripcion}" TextColor="Black"/>
                                     </FormattedString.Spans>
                                 </FormattedString>
                             </Label.FormattedText>
@@ -29,16 +38,7 @@
                             <Label.FormattedText>
                                 <FormattedString>
                                     <FormattedString.Spans>
-                                        <Span Text="{Binding [0].atx_descripcion}"/>
-                                    </FormattedString.Spans>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                        <Label>
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <FormattedString.Spans>
-                                    <Span Text="Fecha de inicio:" FontAttributes="Bold"/>
+                                    <Span Text="Fecha de inicio:" FontAttributes="Bold" TextColor="Black"/>
                                     <Span Text="{Binding [0].atx_fechadeinicio}"/>
                                     </FormattedString.Spans>
                                 </FormattedString>
@@ -48,32 +48,20 @@
                             <Label.FormattedText>
                                 <FormattedString>
                                     <FormattedString.Spans>
-                                    <Span Text="Fecha de finalización:" FontAttributes="Bold"/>
+                                    <Span Text="Fecha de finalización:" FontAttributes="Bold" TextColor="Black"/>
                                     <Span Text="{Binding [0].atx_fechadefinalizacion}"/>
                                     </FormattedString.Spans>
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Link de registro"
-                  TextColor="Blue" FontSize="Body">
-                                    <Span.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding TapCommand}"
-                                          CommandParameter="{Binding [0].atx_linkderegistro}"/>
-                                    </Span.GestureRecognizers>
-                                </Span>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+                    <Button Text="Más noticias" Clicked="Link1_Clicked" TextColor="Blue" BackgroundColor="Transparent"/>
                 </StackLayout>
                 <StackLayout BackgroundColor="LightGray">
-                    <Label>
+                    <Label HorizontalOptions="Center">
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="{Binding [1].atx_name}" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+                                    <Span Text="{Binding [1].atx_name}" FontSize="Large" TextColor="DarkOrange" FontAttributes="Bold"/>
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
@@ -82,7 +70,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="{Binding [1].atx_descripcion}"/>
+                                    <Span Text="{Binding [1].atx_descripcion}" TextColor="Black"/>
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
@@ -91,7 +79,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="Fecha de inicio:" FontAttributes="Bold"/>
+                                    <Span Text="Fecha de inicio:" FontAttributes="Bold" TextColor="Black"/>
                                     <Span Text="{Binding [1].atx_fechadeinicio}"/>
                                 </FormattedString.Spans>
                             </FormattedString>
@@ -101,32 +89,20 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="Fecha de finalización:" FontAttributes="Bold"/>
+                                    <Span Text="Fecha de finalización:" FontAttributes="Bold" TextColor="Black"/>
                                     <Span Text="{Binding [1].atx_fechadefinalizacion}"/>
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Link de registro"
-                  TextColor="Blue">
-                                    <Span.GestureRecognizers>
-                                        <TapGestureRecognizer  Command="{Binding TapCommand}"
-                                          CommandParameter="{Binding [1].atx_linkderegistro}" />
-                                    </Span.GestureRecognizers>
-                                </Span>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+                    <Button Text="Más noticias" Clicked="Link1_Clicked" TextColor="Blue" BackgroundColor="Transparent"/>
                 </StackLayout>
                 <StackLayout BackgroundColor="LightBlue">
-                    <Label>
+                    <Label HorizontalOptions="Center">
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="{Binding [2].atx_name}" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+                                    <Span Text="{Binding [2].atx_name}" FontSize="Large" TextColor="DarkOrange" FontAttributes="Bold"/>
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
@@ -135,7 +111,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="{Binding [2].atx_descripcion}"/>
+                                    <Span Text="{Binding [2].atx_descripcion}" TextColor="Black"/>
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
@@ -144,7 +120,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="Fecha de inicio:" FontAttributes="Bold"/>
+                                    <Span Text="Fecha de inicio:" FontAttributes="Bold" TextColor="Black"/>
                                     <Span Text="{Binding [2].atx_fechadeinicio}"/>
                                 </FormattedString.Spans>
                             </FormattedString>
@@ -154,25 +130,13 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="Fecha de finalización:" FontAttributes="Bold"/>
+                                    <Span Text="Fecha de finalización:" FontAttributes="Bold" TextColor="Black"/>
                                     <Span Text="{Binding [2].atx_fechadefinalizacion}"/>
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Link de registro"
-                  TextColor="Blue">
-                                    <Span.GestureRecognizers>
-                                        <TapGestureRecognizer  Command="{Binding TapCommand}"
-                                          CommandParameter="{Binding [2].atx_linkderegistro}" />
-                                    </Span.GestureRecognizers>
-                                </Span>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+                    <Button Text="Más noticias" Clicked="Link1_Clicked" TextColor="Blue" BackgroundColor="Transparent"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

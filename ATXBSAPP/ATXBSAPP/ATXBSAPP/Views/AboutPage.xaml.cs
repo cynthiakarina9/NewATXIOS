@@ -34,12 +34,6 @@ namespace ATXBSAPP.Views
         {
             await Browser.OpenAsync("https://www.linkedin.com/company/atx-business-solutions/");
         }
-
-        async void YT_Clicked(object sender, EventArgs e)
-        {
-            await Browser.OpenAsync("https://www.linkedin.com/company/atx-business-solutions/");
-        }
-
         async void Twitter_Clicked(object sender, EventArgs e)
         {
             await Browser.OpenAsync("https://www.linkedin.com/company/atx-business-solutions/");

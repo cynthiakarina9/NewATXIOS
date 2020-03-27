@@ -19,7 +19,7 @@
             <Color x:Key="LightTextColor">#999999</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
-
+    
     <Grid>
         <ScrollView>
             <StackLayout>
@@ -29,11 +29,11 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                 </Grid>
-                <StackLayout  HorizontalOptions="FillAndExpand" Grid.Row="0">
+                <StackLayout  VerticalOptions="Fill" HorizontalOptions="FillAndExpand" Grid.Row="0">
                     <Image Source="HOME22.png"/>
                 </StackLayout>
                 <StackLayout>
-                    <Label>
+                    <Label HorizontalOptions="Center">
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
@@ -43,9 +43,7 @@
                         </Label.FormattedText>
                     </Label>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                        <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                            <Image Source="{Binding [0].new_urlimagen}" />
-                        </ContentView>
+                        <Image Source="{Binding [0].new_urlimagen}" HeightRequest="230" WidthRequest="320"/>
                     </StackLayout>
                     <Label>
                         <Label.FormattedText>
@@ -58,10 +56,6 @@
                         </Label.FormattedText>
                     </Label>
                 </StackLayout>
-                <Button Text="Ver Webinars" Clicked="Webinar_Clicked" BackgroundColor="#007bbf" TextColor="White" HorizontalOptions="Center" 
-                WidthRequest="180" HeightRequest="40" Margin="0,0,20,22"/>
-                
-                
             </StackLayout>
         </ScrollView>
         <Button Grid.Row="0" Text="Soporte" BorderColor="#000000" Clicked="support_Clicked"

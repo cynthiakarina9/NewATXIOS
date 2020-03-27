@@ -46,7 +46,7 @@ namespace ATXAPP
                 //Set the Authorization header with the Access Token received specifying the Credentials
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authToken);
                 httpClient.BaseAddress = new Uri(redirectUrl);
-                HttpResponseMessage responses = await httpClient.GetAsync("atx_webinars?$select=atx_name,atx_descripcion,atx_fechadeinicio,atx_fechadefinalizacion,atx_linkderegistro,createdby&$orderby=atx_fechadeinicio");
+                HttpResponseMessage responses = await httpClient.GetAsync("atx_webinars?$select=atx_name,atx_descripcion,atx_fechadeinicio,atx_fechadefinalizacion,atx_linkderegistro,createdby&$orderby=atx_fechadeinicio%20desc");
                 responses.EnsureSuccessStatusCode();
                 string json = "";
                 if (responses.IsSuccessStatusCode)

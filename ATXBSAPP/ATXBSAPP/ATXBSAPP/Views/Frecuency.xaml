@@ -8,42 +8,61 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Icon="chatbot0.png" Clicked="Chat_Clicked" />
     </ContentPage.ToolbarItems>
-
+    
     <ContentPage.Content>
-      
-           <ScrollView Grid.Row="1">
-            <StackLayout>
-                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill" HeightRequest="150" WidthRequest="100">
-                    <Image Source="HOME.png" VerticalOptions="Center" />
+        <Grid>
+            <ScrollView>
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                    </Grid>
                     <StackLayout>
-                        <Label Text="¿Qué beneficios obtengo al contratar un plan de soporte?" FontSize="Large" TextColor="BlueViolet"/>
-                        <Label Text="Atencion directa de un ingeniero de soporte. Evitar cualquier tramite o proceso comercial. Paga solo el tiempo consumido en la resolucion de su caso." FontSize="Body"/>
-                    </StackLayout>
-                    <StackLayout>
-                        <Label Text="¿Con que PACs para el addon de FE ATX han trabajado?" FontSize="Large" TextColor="BlueViolet"/>
-                        <Label Text="FEL, Folios Digitales, Facture Ya, Factura inteligente, Edicom,Ekomercio, Invoice One, Dfacture" FontSize="Body"/>
-                    </StackLayout>
-                    <StackLayout>
-                        <Label Text="¿Dónde puedo encontrar documentacion o guias sobre NAV/BC?" FontSize="Large" TextColor="BlueViolet"/>
-                        <Label>
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span Text="https://docs.microsoft.com/es-mx/dynamics365/business-central/index"
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.Row="0">
+                            <Image Source="HOME22.png"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="¿Qué beneficios obtengo al contratar un plan de soporte?" FontSize="Large" TextColor="DarkBlue"/>
+                            <Label Text="Atencion directa de un ingeniero de soporte. Evitar cualquier tramite o proceso comercial. Paga solo el tiempo consumido en la resolucion de su caso." FontSize="Body"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="¿Con que PACs para el addon de FE ATX han trabajado?" FontSize="Large" TextColor="DarkBlue"/>
+                            <Label Text="FEL, Folios Digitales, Facture Ya, Factura inteligente, Edicom,Ekomercio, Invoice One, Dfacture." FontSize="Body"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="¿Dónde puedo encontrar documentacion o guias sobre NAV/BC?" FontSize="Large" TextColor="DarkBlue"/>
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="https://docs.microsoft.com/es-mx/dynamics365/business-central/index"
                   TextColor="Blue" FontSize="Body">
-                                        <Span.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding TapCommand}"
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding TapCommand}"
                                           CommandParameter="https://docs.microsoft.com/es-mx/dynamics365/business-central/index"/>
-                                        </Span.GestureRecognizers>
-                                    </Span>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="¿Cual es el periodo de un plan de soporte?" FontSize="Large" TextColor="DarkBlue"/>
+                            <Label Text="Puede ser Mensual, Bimestral, Semestral o Anual." FontSize="Body"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="¿Que tipo de soporte tienen?" FontSize="Large" TextColor="DarkBlue"/>
+                            <Label Text="Soporte Remoto y soporte en sitio." FontSize="Body"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="¿ Cuantas horas de soporte puedo comprar?" FontSize="Large" TextColor="DarkBlue"/>
+                            <Label Text="Un minimo de 20." FontSize="Body"/>
+                        </StackLayout>
                     </StackLayout>
-                    
                 </StackLayout>
-            
-            </StackLayout>
-      </ScrollView>
+            </ScrollView>
+        </Grid>
     </ContentPage.Content>
     
 

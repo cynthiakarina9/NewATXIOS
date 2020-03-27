@@ -18,13 +18,12 @@ namespace ATXBSAPP.Views
         private ObservableCollection<Post>_post;*/
        
         RestService _restService; 
-        public ICommand TapCommand = new Command<string>(async (url) => await Launcher.OpenAsync(url));
+        //public ICommand TapCommand = new Command<string>(async (url) => await Launcher.OpenAsync(url));
         public PostRestPage()
         {
             Title = "Noticias";
             InitializeComponent();
             _restService = new RestService();
-            BindingContext = this;
         }
 
         protected override async void OnAppearing()
@@ -41,6 +40,10 @@ namespace ATXBSAPP.Views
         async void Chat_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new WebPage()));
+        }
+        async void Link1_Clicked(object sender, EventArgs e)
+        {
+            await Browser.OpenAsync("https://www.atx.mx/news");
         }
     }
 }

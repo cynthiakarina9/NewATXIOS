@@ -26,7 +26,12 @@
     <Grid>
         <ScrollView>
             <StackLayout>
-                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                </Grid>
                 <StackLayout VerticalOptions="Fill" HorizontalOptions="FillAndExpand" Grid.Row="0">
                     <Image Source="ACERCADE.pgn"></Image>
                 </StackLayout>
@@ -80,8 +85,6 @@
                         <Button ImageSource="LINKEDIN.png" Clicked="LinkDnk_Clicked" BackgroundColor="Transparent"  Grid.Column="2"/>
                         <Button ImageSource="INSTAGRAM.png" Clicked="Instagram_Clicked" BackgroundColor="Transparent"  Grid.Column="3"/>
                         <Button ImageSource="TWITTER.png" Clicked="Twitter_Clicked" BackgroundColor="Transparent"  Grid.Column="4"/>
-                        <Button ImageSource="YT.png" Clicked="YT_Clicked" BackgroundColor="Transparent"  Grid.Column="5"/>
-                        
                     </StackLayout>
             </StackLayout>
             </StackLayout>
