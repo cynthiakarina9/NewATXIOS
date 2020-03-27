@@ -193,12 +193,12 @@
     <BundleResource Include="Resources\PROMOCION.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\chatbot0.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\NOTICIAS.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\HOME.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\chatbot0.png" />
   </ItemGroup>
 </Project>

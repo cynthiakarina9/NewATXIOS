@@ -54,7 +54,7 @@
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
-                    <Button Text="Link de registro" Clicked="Link1_Clicked" TextColor="#030336" BackgroundColor="Transparent"/>
+                    <Button Text="Link de registro" Clicked="Link1_Clicked" TextColor="#55befa" BackgroundColor="Transparent"/>
                 </StackLayout>
                 <StackLayout BackgroundColor="LightGray">
                     <Label HorizontalOptions="Center">
@@ -95,7 +95,7 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Button Text="Link de registro" Clicked="Link2_Clicked" TextColor="#030336" BackgroundColor="Transparent"/>
+                    <Button Text="Link de registro" Clicked="Link2_Clicked" TextColor="#55befa" BackgroundColor="Transparent"/>
                 </StackLayout>
                 <StackLayout BackgroundColor="LightBlue">
                     <Label HorizontalOptions="Center">
@@ -136,7 +136,7 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Button Text="Link de registro" Clicked="Link3_Clicked" TextColor="#030336" BackgroundColor="Transparent"/>
+                    <Button Text="Link de registro" Clicked="Link3_Clicked" TextColor="#55befa" BackgroundColor="Transparent"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>
