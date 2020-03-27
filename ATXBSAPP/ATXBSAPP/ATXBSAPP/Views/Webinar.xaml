@@ -13,14 +13,14 @@
         <ScrollView>
             <StackLayout>
                 <StackLayout  HorizontalOptions="FillAndExpand" Grid.Row="0">
-                    <Image Source="HOME.png"/>
+                    <Image Source="WEBINARS.png"/>
                 </StackLayout>
                 <StackLayout BackgroundColor="LightBlue">
-                        <Label>
+                        <Label HorizontalOptions="Center">
                             <Label.FormattedText>
                                 <FormattedString>
                                     <FormattedString.Spans>
-                                        <Span Text="{Binding [0].atx_name}" FontSize="Large" TextColor="DarkOrange" FontAttributes="Bold"/>
+                                    <Span Text="{Binding [0].atx_name}" FontSize="Large" TextColor="#0067b0 " FontAttributes="Bold"/>
                                     </FormattedString.Spans>
                                 </FormattedString>
                             </Label.FormattedText>
@@ -54,14 +54,14 @@
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
-                    <Button Text="Más noticias" Clicked="Link1_Clicked" TextColor="Blue" BackgroundColor="Transparent"/>
+                    <Button Text="Link de registro" Clicked="Link1_Clicked" TextColor="#030336" BackgroundColor="Transparent"/>
                 </StackLayout>
                 <StackLayout BackgroundColor="LightGray">
                     <Label HorizontalOptions="Center">
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="{Binding [1].atx_name}" FontSize="Large" TextColor="DarkOrange" FontAttributes="Bold"/>
+                                    <Span Text="{Binding [1].atx_name}" FontSize="Large" TextColor="#0067b0" FontAttributes="Bold"/>
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
@@ -95,14 +95,14 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Button Text="Más noticias" Clicked="Link1_Clicked" TextColor="Blue" BackgroundColor="Transparent"/>
+                    <Button Text="Link de registro" Clicked="Link2_Clicked" TextColor="#030336" BackgroundColor="Transparent"/>
                 </StackLayout>
                 <StackLayout BackgroundColor="LightBlue">
                     <Label HorizontalOptions="Center">
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="{Binding [2].atx_name}" FontSize="Large" TextColor="DarkOrange" FontAttributes="Bold"/>
+                                    <Span Text="{Binding [2].atx_name}" FontSize="Large" TextColor="#0067b0" FontAttributes="Bold"/>
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
@@ -136,7 +136,7 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Button Text="Más noticias" Clicked="Link1_Clicked" TextColor="Blue" BackgroundColor="Transparent"/>
+                    <Button Text="Link de registro" Clicked="Link3_Clicked" TextColor="#030336" BackgroundColor="Transparent"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

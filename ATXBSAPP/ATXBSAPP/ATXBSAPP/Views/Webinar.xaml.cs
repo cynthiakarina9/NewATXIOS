@@ -36,7 +36,21 @@ namespace ATXBSAPP.Views
         }
         async void Link1_Clicked(object sender, EventArgs e)
         {
-            await Browser.OpenAsync("https://www.atx.mx/news");
+            weatherData3 = await _restService.GetWeatherData3Async();
+            string data1 = weatherData3[0].atx_linkderegistro;
+            await Browser.OpenAsync(data1);
+        }
+        async void Link2_Clicked(object sender, EventArgs e)
+        {
+            weatherData3 = await _restService.GetWeatherData3Async();
+            string data2 = weatherData3[1].atx_linkderegistro;
+            await Browser.OpenAsync(data2);
+        }
+        async void Link3_Clicked(object sender, EventArgs e)
+        {
+            weatherData3 = await _restService.GetWeatherData3Async();
+            string data3 = weatherData3[1].atx_linkderegistro;
+            await Browser.OpenAsync(data3);
         }
     }
 }

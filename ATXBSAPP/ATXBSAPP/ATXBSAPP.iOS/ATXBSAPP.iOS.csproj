@@ -157,55 +157,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\WORK.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\KUMDE.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\MICROSOFT.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\xamarin_logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\YT22.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ACERCADE.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\chatbot0.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\DESTACADA.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\FACEBOOK22.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\HOME22.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\IMG1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\INSTAGRAM22.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\logo_ATX.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\NOTICIAS.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\PREGUNTASFRECUENTES.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\promocion.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\TWITTER22.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\TWITTER.png" />
@@ -221,6 +185,18 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\LINKEDIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\WEBINARS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PROMOCION.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\chatbot0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\NOTICIAS.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\HOME.png" />

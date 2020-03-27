@@ -48,6 +48,12 @@ namespace ATXBSAPP.Views
         {
             await Browser.OpenAsync("https://soporte.atx.com.mx");
         }
+        async void Link1_Clicked(object sender, EventArgs e)
+        {
+            weatherData = await _restService.GetWeatherDataAsync();
+            string data1 = weatherData[0].new_linkpost;
+            await Browser.OpenAsync(data1);
+        }
 
     }
 }

@@ -77,14 +77,11 @@
                         Command="{Binding OpenWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White"/>
-                
-
-                <StackLayout Orientation="Horizontal">
-                        
-                    <Button ImageSource="FACEBOOK.png" Clicked="FB_Clicked" BackgroundColor="Transparent" Grid.Column="1"/>
-                        <Button ImageSource="LINKEDIN.png" Clicked="LinkDnk_Clicked" BackgroundColor="Transparent"  Grid.Column="2"/>
-                        <Button ImageSource="INSTAGRAM.png" Clicked="Instagram_Clicked" BackgroundColor="Transparent"  Grid.Column="3"/>
-                        <Button ImageSource="TWITTER.png" Clicked="Twitter_Clicked" BackgroundColor="Transparent"  Grid.Column="4"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Button ImageSource="FACEBOOK.png" Clicked="FB_Clicked" BackgroundColor="Transparent"/>
+                        <Button ImageSource="LINKEDIN.png" Clicked="LinkDnk_Clicked" BackgroundColor="Transparent"/>
+                        <Button ImageSource="INSTAGRAM.png" Clicked="Instagram_Clicked" BackgroundColor="Transparent"/>
+                        <Button ImageSource="TWITTER.png" Clicked="Twitter_Clicked" BackgroundColor="Transparent"/>
                     </StackLayout>
             </StackLayout>
             </StackLayout>

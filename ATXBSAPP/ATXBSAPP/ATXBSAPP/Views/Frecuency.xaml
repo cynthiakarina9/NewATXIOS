@@ -21,7 +21,7 @@
                     </Grid>
                     <StackLayout>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.Row="0">
-                            <Image Source="HOME22.png"/>
+                            <Image Source="PREGUNTASFRECUENTES.png"/>
                         </StackLayout>
                         <StackLayout>
                             <Label Text="¿Qué beneficios obtengo al contratar un plan de soporte?" FontSize="Large" TextColor="DarkBlue"/>

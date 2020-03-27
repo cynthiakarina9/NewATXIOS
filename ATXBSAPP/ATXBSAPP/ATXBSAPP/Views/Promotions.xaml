@@ -18,14 +18,14 @@
                     </Grid.RowDefinitions>
                 </Grid>
                 <StackLayout  HorizontalOptions="FillAndExpand" Grid.Row="0">
-                    <Image Source="ACERCADE.pgn"></Image>
+                    <Image Source="PROMOCION.pgn"></Image>
                 </StackLayout>
-                <StackLayout BackgroundColor="#b7cedf7a">
+                <StackLayout BackgroundColor="#bababa">
                     <Label>
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="{Binding [0].atx_name}" FontSize="Large" TextColor="DarkBlue"/>
+                                    <Span Text="{Binding [0].atx_name}" FontSize="Large" TextColor="#0067b0"/>
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
@@ -60,12 +60,12 @@
                         </Label.FormattedText>
                     </Label>
                 </StackLayout>
-                <StackLayout BackgroundColor="#d2e5f47a">
+                <StackLayout BackgroundColor="#bababa">
                     <Label>
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="{Binding [1].atx_name}" FontSize="Large" TextColor="DarkBlue"/>
+                                    <Span Text="{Binding [1].atx_name}" FontSize="Large" TextColor="#0067b0"/>
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
@@ -100,12 +100,12 @@
                         </Label.FormattedText>
                     </Label>
                 </StackLayout>
-                <StackLayout BackgroundColor="#a0bdd47a">
+                <StackLayout BackgroundColor="#bababa">
                     <Label>
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="{Binding [2].atx_name}" FontSize="Large" TextColor="DarkBlue"/>
+                                    <Span Text="{Binding [2].atx_name}" FontSize="Large" TextColor="#0067b0"/>
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
@@ -140,12 +140,12 @@
                         </Label.FormattedText>
                     </Label>
                 </StackLayout>
-                <StackLayout BackgroundColor="#aedafc7a">
+                <StackLayout BackgroundColor="#bababa">
                     <Label>
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="{Binding [3].atx_name}" FontSize="Large" TextColor="DarkBlue"/>
+                                    <Span Text="{Binding [3].atx_name}" FontSize="Large" TextColor="#0067b0"/>
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>

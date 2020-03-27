@@ -30,7 +30,10 @@
                     </Grid.RowDefinitions>
                 </Grid>
                 <StackLayout  VerticalOptions="Fill" HorizontalOptions="FillAndExpand" Grid.Row="0">
-                    <Image Source="HOME22.png"/>
+                    <Image Source="HOME.png"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center">
+                    <Label Text="--------------Más recientes--------------" FontSize="20"/>
                 </StackLayout>
                 <StackLayout>
                     <Label HorizontalOptions="Center">
@@ -55,6 +58,7 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
+                    <Button Text="Más información" Clicked="Link1_Clicked" TextColor="#1085c8" BackgroundColor="Transparent"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>
