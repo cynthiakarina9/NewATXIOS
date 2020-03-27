@@ -18,10 +18,8 @@
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
                     </Grid>
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="0">
-                        <ContentView Padding="0,40,0,40" VerticalOptions="CenterAndExpand" >
-                            <Image Source="HOME22.pgn"/>
-                        </ContentView>
+                    <StackLayout VerticalOptions="Fill" HorizontalOptions="FillAndExpand" Grid.Row="0">
+                        <Image Source="HOME22.pgn"/>
                     </StackLayout>
                     <StackLayout>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
@@ -75,7 +73,7 @@
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
-                        <Button Text="Más noticias" Clicked="Link1_Clicked" TextColor="Blue" BackgroundColor="Transparent"/>
+                        <Button Text="Más noticias" Clicked="Link2_Clicked" TextColor="Blue" BackgroundColor="Transparent"/>
                     </StackLayout>
                     <StackLayout>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
@@ -102,7 +100,7 @@
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
-                        <Button Text="Más noticias" Clicked="Link1_Clicked" TextColor="Blue" BackgroundColor="Transparent"/>
+                        <Button Text="Más noticias" Clicked="Link3_Clicked" TextColor="Blue" BackgroundColor="Transparent"/>
                     </StackLayout>
                     <StackLayout>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
@@ -127,10 +125,10 @@
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
-                        <Button Text="Más noticias" Clicked="Link1_Clicked" TextColor="Blue" BackgroundColor="Transparent"/>
+                        <Button Text="Más noticias" Clicked="Link4_Clicked" TextColor="Blue" BackgroundColor="Transparent"/>
                     </StackLayout>
                     <StackLayout>
-                        <Button Text="Más noticias" Clicked="Link1_Clicked" TextColor="White" BackgroundColor="AliceBlue"/>
+                        <Button Text="Más noticias" Clicked="Link0_Clicked" TextColor="White" BackgroundColor="Blue"/>
                     </StackLayout>
                 </StackLayout>
             </ScrollView>

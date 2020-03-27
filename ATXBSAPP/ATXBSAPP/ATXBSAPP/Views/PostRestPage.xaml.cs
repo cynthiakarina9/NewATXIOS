@@ -41,9 +41,36 @@ namespace ATXBSAPP.Views
         {
             await Navigation.PushModalAsync(new NavigationPage(new WebPage()));
         }
+        async void Link0_Clicked(object sender, EventArgs e)
+        {
+            await Browser.OpenAsync("https://atx.mx/news/");
+        }
         async void Link1_Clicked(object sender, EventArgs e)
         {
-            await Browser.OpenAsync("https://www.atx.mx/news");
+            weatherData = await _restService.GetWeatherDataAsync();
+            string data = weatherData[0].new_linkpost;
+            await Browser.OpenAsync(data);
+        }
+
+        async void Link2_Clicked(object sender, EventArgs e)
+        {
+            weatherData = await _restService.GetWeatherDataAsync();
+            string data = weatherData[1].new_linkpost;
+            await Browser.OpenAsync(data);
+        }
+
+        async void Link3_Clicked(object sender, EventArgs e)
+        {
+            weatherData = await _restService.GetWeatherDataAsync();
+            string data = weatherData[2].new_linkpost;
+            await Browser.OpenAsync(data);
+        }
+
+        async void Link4_Clicked(object sender, EventArgs e)
+        {
+            weatherData = await _restService.GetWeatherDataAsync();
+            string data = weatherData[3].new_linkpost;
+            await Browser.OpenAsync(data);
         }
     }
 }
