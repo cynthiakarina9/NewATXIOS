@@ -33,14 +33,14 @@
                     <Image Source="HOME.png"/>
                 </StackLayout>
                 <StackLayout HorizontalOptions="Center">
-                    <Label Text="--------------Más recientes--------------" FontSize="20"/>
+                    <Label Text="--------------------Más recientes--------------------" FontSize="12"/>
                 </StackLayout>
                 <StackLayout>
                     <Label HorizontalOptions="Center">
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="{Binding [0].adx_name}" FontSize="Large" TextColor="DarkBlue"/>
+                                    <Span Text="{Binding [0].adx_name}" FontSize="Large" TextColor="#0067b0"/>
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
@@ -58,7 +58,7 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Button Text="Más información" Clicked="Link1_Clicked" TextColor="#1085c8" BackgroundColor="Transparent"/>
+                    <Button Text="Más información" Clicked="Link1_Clicked" TextColor="#55befa" BackgroundColor="Transparent"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

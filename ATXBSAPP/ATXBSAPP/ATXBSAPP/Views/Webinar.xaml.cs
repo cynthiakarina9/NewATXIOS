@@ -17,7 +17,6 @@ namespace ATXBSAPP.Views
         public Webinar()
         {
             InitializeComponent();
-            Title = "Webinars";
             _restService = new RestServiceWebinar();
         }
 

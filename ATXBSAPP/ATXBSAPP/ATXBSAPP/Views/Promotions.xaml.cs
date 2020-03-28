@@ -16,7 +16,6 @@ namespace ATXBSAPP.Views
         RestServicePromo _restService;
         public Promotions()
         {
-            Title = "Promociones";
             InitializeComponent();
             _restService = new RestServicePromo();
         }

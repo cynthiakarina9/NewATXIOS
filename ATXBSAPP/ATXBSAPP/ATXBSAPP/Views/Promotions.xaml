@@ -30,6 +30,7 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
+                    <Label/>
                     <Label>
                         <Label.FormattedText>
                             <FormattedString>
@@ -70,6 +71,7 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
+                    <Label/>
                     <Label>
                         <Label.FormattedText>
                             <FormattedString>
@@ -110,6 +112,7 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
+                    <Label/>
                     <Label>
                         <Label.FormattedText>
                             <FormattedString>
@@ -150,6 +153,7 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
+                    <Label/>
                     <Label>
                         <Label.FormattedText>
                             <FormattedString>

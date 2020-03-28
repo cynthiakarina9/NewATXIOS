@@ -13,7 +13,6 @@ namespace ATXBSAPP.Views
         public ICommand TapCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url));
         public Frecuency()
         {
-            Title = "Preguntas frecuentes";
             InitializeComponent();
             BindingContext = this;
         }

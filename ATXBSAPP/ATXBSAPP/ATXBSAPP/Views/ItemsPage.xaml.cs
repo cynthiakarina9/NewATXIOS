@@ -22,7 +22,6 @@ namespace ATXBSAPP.Views
         public ItemsPage()
         {
             InitializeComponent();
-            Title = "Inicio";
             _restService = new RestService();
         }
 

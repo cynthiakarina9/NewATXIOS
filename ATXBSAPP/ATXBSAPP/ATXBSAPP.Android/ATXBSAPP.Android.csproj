@@ -117,15 +117,6 @@
     <AndroidResource Include="Resources\drawable\chatbot0.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\MICROSOFT.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\PREGUNTASFRECUENTES.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ACERCADE.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\FACEBOOK.png" />
   </ItemGroup>
   <ItemGroup>
@@ -141,16 +132,22 @@
     <AndroidResource Include="Resources\drawable\YT.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\WEBINARS.png" />
+    <AndroidResource Include="Resources\drawable\ACERCADE.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\PROMOCION.png" />
+    <AndroidResource Include="Resources\drawable\HOME.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\NOTICIAS.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\HOME.png" />
+    <AndroidResource Include="Resources\drawable\PREGUNTASFRECUENTES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\PROMOCION.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\WEBINAR.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

@@ -17,7 +17,7 @@
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Color x:Key="Primary">#007bbf</Color>
+            <Color x:Key="Primary">#030336</Color>
             <Color x:Key="Accent">#96d1ff</Color>
             <Color x:Key="LightTextColor">#999999</Color>
         </ResourceDictionary>
@@ -40,7 +40,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="Atx Business Solutions" FontAttributes="Bold" FontSize="22" />
+                                    <Span Text="Atx Business Solutions" FontAttributes="Bold" FontSize="22" TextColor="#0067b0"/>
                                     <Span Text=" " />
                                     <Span Text="1.0" ForegroundColor="{StaticResource LightTextColor}" />
                                 </FormattedString.Spans>

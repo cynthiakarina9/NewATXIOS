@@ -17,7 +17,6 @@ namespace ATXBSAPP.Views
         RestService _restService; 
         public PostRestPage()
         {
-            Title = "Noticias";
             InitializeComponent();
             _restService = new RestService();
         }
