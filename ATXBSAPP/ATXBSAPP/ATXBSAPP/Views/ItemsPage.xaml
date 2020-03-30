@@ -9,7 +9,7 @@
              x:Name="BrowseItemsPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="chatbot0.png" Clicked="Chat_Clicked" Order="Primary"/>
+        <ToolbarItem Text="Chatbot" Clicked="Chat_Clicked" Order="Primary"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Resources>
