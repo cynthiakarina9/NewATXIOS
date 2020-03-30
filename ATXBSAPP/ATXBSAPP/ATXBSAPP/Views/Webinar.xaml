@@ -95,7 +95,7 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Button Text="Link de registro" Clicked="Link2_Clicked" TextColor="b2daf1" BackgroundColor="Transparent"/>
+                    <Button Text="Link de registro" Clicked="Link2_Clicked" TextColor="#b2daf1" BackgroundColor="Transparent"/>
                 </StackLayout>
                 <StackLayout BackgroundColor="#0067b0">
                     <Label HorizontalOptions="Center">
